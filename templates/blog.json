@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "db3f9532-fb40-4caa-bd9c-97d2a659ff07": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16097489256625__db3f9532-fb40-4caa-bd9c-97d2a659ff07-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Hempe Blog",
+            "heading_size": "h1"
+          }
+        },
+        "template--16097489256625__db3f9532-fb40-4caa-bd9c-97d2a659ff07-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--16097489256625__db3f9532-fb40-4caa-bd9c-97d2a659ff07-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16097489256625__db3f9532-fb40-4caa-bd9c-97d2a659ff07-heading-1",
+        "template--16097489256625__db3f9532-fb40-4caa-bd9c-97d2a659ff07-text-1",
+        "template--16097489256625__db3f9532-fb40-4caa-bd9c-97d2a659ff07-buttons-1"
+      ],
+      "custom_css": [
+        ".banner {min-height: 0 !important;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/shutterstock_525429034.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-01cf0232-bc91-4217-ba3a-354366637960",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "small",
+        "show_date": false,
+        "show_author": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "db3f9532-fb40-4caa-bd9c-97d2a659ff07",
+    "main"
+  ]
+}

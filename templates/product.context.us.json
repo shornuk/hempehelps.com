@@ -1,0 +1,42 @@
+{
+  "parent": "product.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "icon_with_text_4cmmQi": {
+          "settings": {
+            "image_3": "shopify:\/\/shop_images\/Hempe_icons_01_Sulphate_Free_18d08408-e285-4589-a1eb-a54eb98d1b47.png",
+            "heading_3": ""
+          }
+        },
+        "collapsible_tab_4ADUFf": {
+          "disabled": true,
+          "settings": {}
+        },
+        "complementary_9GgMTa": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    },
+    "collapsible_content_Ebtn7K": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {
+        "collapsible_row_9nq7c9": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    },
+    "custom_liquid_HdJtbc": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  }
+}

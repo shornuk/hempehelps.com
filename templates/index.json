@@ -1,0 +1,826 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_jwhgQx": {
+      "type": "hero",
+      "blocks": {
+        "heading_MxR7TC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Feel Better. Live Better.",
+            "heading_size": "h1"
+          }
+        },
+        "text_YGxhnK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>HEMPE aim to give our customers the freedom to live life without limitations. Providing relief from those aches, sore muscles and skin complaints that can sometimes hold us back. Scientifically created using over 60 years of research by world renowned scientists.</p><p>FORMULATED FOR FREEDOM.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_wzXn9q": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop",
+            "button_link": "shopify://collections/cbd-relief-products",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MxR7TC",
+        "text_YGxhnK",
+        "button_wzXn9q"
+      ],
+      "custom_css": [
+        ".image-with-text__text {max-width: 700px;}",
+        ".image-with-text__content {padding: 2rem 2rem 3rem;}",
+        "@media screen and (min-width: 990px) {.image-with-text__content {padding: 4rem 4rem 4rem; }}",
+        ".image-with-text__media {border: 0; /* background-color: #e1f5e4; */}",
+        ".image-with-text__text {font-size: calc(var(--font-body-scale) * 1.2rem);}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/HEMPE_couplejpg_copy_1.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-d8b74ac0-1607-4212-8b75-fa581019b8ae",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1fe29708-4491-4c62-a1ca-4b229f903b40": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16097489453233__1fe29708-4491-4c62-a1ca-4b229f903b40-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why HEMPE?",
+            "heading_size": "h1"
+          }
+        },
+        "template--16097489453233__1fe29708-4491-4c62-a1ca-4b229f903b40-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our products are formulated by the people who discovered CBD in 1955. We have a range of the best CBD topical gels and balms available. </p><p>Our USP is the science behind the products, which have been created using over 60 years of R&D by our scientific formulators, who have over 30 years experience.</p><p>Our unique delivery system penetrates the skin barrier, for help with rapid alleviation.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16097489453233__1fe29708-4491-4c62-a1ca-4b229f903b40-heading-1",
+        "template--16097489453233__1fe29708-4491-4c62-a1ca-4b229f903b40-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".rating {margin-bottom: 12px;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "cbd-relief-products",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "trustpilot_ULAfTw": {
+      "type": "trustpilot",
+      "blocks": {
+        "review_qfqjrc": {
+          "type": "review",
+          "settings": {
+            "title": "Hot and Cold Gels",
+            "text": "<p>Lost for words at how quick and effective they are and, more importantly how long the pain is eased for. Five hours pain free in both cases from a small topical application - I can't<br/>put a price on how that felt! Thank you HEMPE!</p>",
+            "author": "Rob Futter"
+          }
+        },
+        "review_U7LG3W": {
+          "type": "review",
+          "settings": {
+            "title": "HEMPE CBD Hot Muscle & Joint Gel",
+            "text": "<p>Absolutely life changing for arthritic pains. I have already recommended it to 2 more<br/>people!</p>",
+            "author": "Bonnie Cyrnik"
+          }
+        },
+        "review_AETj8G": {
+          "type": "review",
+          "settings": {
+            "title": "Truly Wonderful!",
+            "text": "<p>Having used a number of 'muscle rubs' in the past I kind of knew what I was getting. A short term fix to a long term back problem...how wrong was !! After only 2-3 applications the long term problem has subsided and only occasionally rears back as a dull ache. Since then 1 application a week has really begun to transform normal<br/>life. Almost looking forward to the next niggle it can fix!</p>",
+            "author": "Dan"
+          }
+        },
+        "review_3eJ6N7": {
+          "type": "review",
+          "settings": {
+            "title": "Bought This Product For My Mum to Help...",
+            "text": "<p>Bought this product for my mum to help her with discomfort from a broken hip 2 years ago. She applies daily and says its helped reduce the pain and discomfort by at least 50%, meaning she can carry on with her day to day life, which is<br/>mostly dog walking. She's 81.</p>",
+            "author": "Russ Eldridge"
+          }
+        }
+      },
+      "block_order": [
+        "review_qfqjrc",
+        "review_U7LG3W",
+        "review_AETj8G",
+        "review_3eJ6N7"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link {justify-content: center;}",
+        ".multicolumn-card__info {display: flex; flex-direction: column; height: 100%;}"
+      ],
+      "settings": {
+        "title": "Our Customer Reviews",
+        "reviews-score": "4.9",
+        "reviews-label": "Excellent",
+        "reviews-count": "200+",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "https://uk.trustpilot.com/review/hir.global",
+        "color_scheme": "scheme-d8b74ac0-1607-4212-8b75-fa581019b8ae",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "testimonials_38rXkQ": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_NnUG9E": {
+          "type": "testimonial",
+          "settings": {
+            "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/nN-g_zCyOss?si=OWb05ELXlYN_zcs3\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+          }
+        },
+        "testimonial_fLnQPV": {
+          "type": "testimonial",
+          "settings": {
+            "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/L-b7pzV5gPs?si=7r4WiwcgZmrGZMGa\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+          }
+        },
+        "testimonial_epfqVz": {
+          "type": "testimonial",
+          "settings": {
+            "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Ntp_NLgHkd8?si=5vCCKD2clvzcDh83\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+          }
+        },
+        "testimonial_8qAXnV": {
+          "type": "testimonial",
+          "settings": {
+            "embed": "<iframe width=\"408\" height=\"726\" title=\"IFBB Legend\" src=\"https://www.youtube.com/embed/GFfgG2n_hx8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_NnUG9E",
+        "testimonial_fLnQPV",
+        "testimonial_epfqVz",
+        "testimonial_8qAXnV"
+      ],
+      "custom_css": [
+        ".title-wrapper-with-link {justify-content: center;}"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ticker_hT7rqW": {
+      "type": "ticker",
+      "blocks": {
+        "image_hxat4F": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logos_Forbes_copy_1.jpg"
+          }
+        },
+        "image_nacW7t": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/The_Sunday_Times-logo-64CA55CC4D-seeklogo.com.png"
+          }
+        },
+        "image_dJQaJW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BBC.jpg"
+          }
+        },
+        "image_p4yFmY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logos_DailyMail_copy.jpg"
+          }
+        },
+        "image_hhAmac": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logos_Yahoo_copy.jpg"
+          }
+        },
+        "image_YPAXB4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logos_Mans_Health_copy_e2b1a99f-7fd7-4cf4-9391-3700787b1573.jpg"
+          }
+        },
+        "image_zCC38G": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logos_Cosmopolitan_1.jpg"
+          }
+        },
+        "image_EnieqP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logos_DigitalSpy.jpg"
+          }
+        },
+        "image_N4aW7r": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Good_housekeeping.png"
+          }
+        },
+        "image_tCcHYP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logos_Cyclist_copy_1.jpg"
+          }
+        },
+        "image_dTrzTA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logos_The_landscaper.jpg"
+          }
+        },
+        "image_76VLyy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logos_Muscle_Health.jpg"
+          }
+        },
+        "image_xAgjfG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logos_House_Beautiful_copy.jpg"
+          }
+        },
+        "image_mzckBC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logos_RunnersWorld.jpg"
+          }
+        },
+        "image_dEMDTz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Logos_WomensHealth_2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_hxat4F",
+        "image_nacW7t",
+        "image_dJQaJW",
+        "image_p4yFmY",
+        "image_hhAmac",
+        "image_YPAXB4",
+        "image_zCC38G",
+        "image_EnieqP",
+        "image_N4aW7r",
+        "image_tCcHYP",
+        "image_dTrzTA",
+        "image_76VLyy",
+        "image_xAgjfG",
+        "image_mzckBC",
+        "image_dEMDTz"
+      ],
+      "custom_css": [
+        ".slide img {height: auto; max-width: 200px;}",
+        ".title-wrapper-with-link {justify-content: center;}"
+      ],
+      "settings": {
+        "title": "As Featured On",
+        "heading_size": "h1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_3T7DRp": {
+      "type": "multirow",
+      "blocks": {
+        "row_3KyMEf": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/shutterstock_1464683555.jpg",
+            "caption": "",
+            "heading": "Our Hard-Working Natural Ingredients",
+            "text": "<p>HEMPE relief products are powered by natural sustainable ingredients like Clove Leaf Oil, Cypress Oil, Laurel Leaf Oil, Eucalyptus, Mentha Arvensis, Lavender & Pinus Sylvestrus. We believe that CBD is one of many powerful ingredients derived from plants that if combined and formulated correctly, can provide relief by bringing together the best of Nature and of Science.</p>",
+            "button_label": "Read More",
+            "button_link": "shopify://pages/our-ingredients"
+          }
+        },
+        "row_phfxqa": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Scientist.jpg",
+            "caption": "",
+            "heading": "Powered  By Science",
+            "text": "<p>HEMPE products are formulated using over 60 years of CBD research by world renowned scientists. Our formulators have decades of experience combining bioactive ingredients to deliver relief with the most effective topical products that ensure our active ingredients penetrate all the skin layers and exert their soothing effects where they are needed.</p>",
+            "button_label": "Read More",
+            "button_link": "shopify://pages/our-story"
+          }
+        }
+      },
+      "block_order": [
+        "row_3KyMEf",
+        "row_phfxqa"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "row_color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "icon_list_QdtCP3": {
+      "type": "icon-list",
+      "blocks": {
+        "icon_RLhAnf": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_Natural_Ingredients_e401d206-5950-4076-9a25-c57c6654b7bb.png",
+            "title": "Natural Ingredients"
+          }
+        },
+        "icon_P9qRmF": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_30yrs_of_Science_98804ba7-419f-49a9-860f-af1ea5896f71.png",
+            "title": "Powered by Science"
+          }
+        },
+        "icon_ceTLEt": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_Cruelty_Free_b0b432d2-f9c1-443a-b5f6-8e402ae6807d.png",
+            "title": "Cruelty Free"
+          }
+        },
+        "icon_xYANFN": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_30_years_03.png",
+            "title": "30 Years Expertise"
+          }
+        },
+        "icon_47kfMy": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_Preservative_Free_094568a3-d4c0-4a4a-992e-5e4c9c8b3824.png",
+            "title": "Preservatives Free"
+          }
+        },
+        "icon_yiekEq": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_THC_Free_1222b477-7737-4982-a4e6-2cc431037dea.png",
+            "title": "THC Free"
+          }
+        },
+        "icon_tV3W8w": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_Sulphate_Free_18d08408-e285-4589-a1eb-a54eb98d1b47.png",
+            "title": "Sulphates Free"
+          }
+        },
+        "icon_a8pRE4": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_Petroleum_Free_adjusted_03.png",
+            "title": "Petroleum Free"
+          }
+        },
+        "icon_PLzDTc": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_Paraben_Free_35d2bc50-605e-499a-9075-cb38a45b8a27.png",
+            "title": "Parabens Free"
+          }
+        }
+      },
+      "block_order": [
+        "icon_RLhAnf",
+        "icon_P9qRmF",
+        "icon_ceTLEt",
+        "icon_xYANFN",
+        "icon_47kfMy",
+        "icon_yiekEq",
+        "icon_tV3W8w",
+        "icon_a8pRE4",
+        "icon_PLzDTc"
+      ],
+      "custom_css": [
+        ".icon-box img {width: 70px; height: 70px;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "background_style": "primary",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "89ee7c32-c7d1-47b2-8edb-79b74280bcc1": {
+      "type": "multirow",
+      "blocks": {
+        "template--16097489453233__89ee7c32-c7d1-47b2-8edb-79b74280bcc1-row-2": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/shutterstock_597637514.jpg",
+            "caption": "",
+            "heading": "Our Award Winning HEMPE Range",
+            "text": "<p>After vigorous quality testing on the HEMPE natural relief range from the UK's most prestigious and most renowned pharmacy, HEMPE came runner up in the John Bell & Croyden 225th Anniversary 'New Brands' Competition and achieved a coveted listing within the store.<br/><br/></p>",
+            "button_label": "Read More",
+            "button_link": "shopify://pages/awards"
+          }
+        },
+        "template--16097489453233__89ee7c32-c7d1-47b2-8edb-79b74280bcc1-row-1": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/shutterstock_2305310039.jpg",
+            "caption": "",
+            "heading": "Sustainability",
+            "text": "<p>Did you know that for every tonne of hemp grown it removes 1.63 tons of carbon from the air? At HEMPE, we are committed to using fewer resources, and creating less waste. All of our HEMPE products are packed in recyclable materials.</p>",
+            "button_label": "Read More",
+            "button_link": "shopify://pages/sustainability"
+          }
+        }
+      },
+      "block_order": [
+        "template--16097489453233__89ee7c32-c7d1-47b2-8edb-79b74280bcc1-row-2",
+        "template--16097489453233__89ee7c32-c7d1-47b2-8edb-79b74280bcc1-row-1"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "row_color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "838af957-3349-4864-bc30-d034f003de5b": {
+      "type": "featured-blog",
+      "custom_css": [
+        ".title-wrapper-with-link {justify-content: center; align-items: center; flex-direction: column;}",
+        ".blog__button {margin-top: 1rem;}"
+      ],
+      "settings": {
+        "heading": "Natural Relief Guides & Insights",
+        "heading_size": "h1",
+        "blog": "guides",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "20bc7d20-25de-48aa-b433-7e478f522fde": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16097489453233__20bc7d20-25de-48aa-b433-7e478f522fde-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Nature's Pharmacy",
+            "heading_size": "h1"
+          }
+        },
+        "template--16097489453233__20bc7d20-25de-48aa-b433-7e478f522fde-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hempe products are powered by natural sustainable ingredients. We believe that CBD is one of many powerful natural ingredients derived from plants that if combined and formulated correctly, can bring together the best of Nature and of Science. Hempe - The best ingredients for your muscles, joints and skin from Nature’s Pharmacy. </p><p></p>",
+            "text_style": "body"
+          }
+        },
+        "65c02a6d-c12c-4f1c-862b-dd6a9407457c": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://pages/our-ingredients",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16097489453233__20bc7d20-25de-48aa-b433-7e478f522fde-heading-1",
+        "template--16097489453233__20bc7d20-25de-48aa-b433-7e478f522fde-text-1",
+        "65c02a6d-c12c-4f1c-862b-dd6a9407457c"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/ms_hempe_plant2.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "b1ecbf0c-8883-4468-b454-1308b65cab5e": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16097489453233__b1ecbf0c-8883-4468-b454-1308b65cab5e-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/hempe-hempe-gym-gift-set-save-10-32382485725361.jpg",
+            "title": "CBD Gym Set",
+            "text": "<p>The perfect set of CBD relief products to soothe those tired muscles and skin.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://products/cbd-gym-gels-bundle"
+          }
+        },
+        "template--16097489453233__b1ecbf0c-8883-4468-b454-1308b65cab5e-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/hempe-hempe-gardening-gift-set-save-10-32382485266609.jpg",
+            "title": "CBD Gardeners Set",
+            "text": "<p>No more post-gardening aches, strains or rough hands.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://products/cbd-gardening-gift-set"
+          }
+        },
+        "template--16097489453233__b1ecbf0c-8883-4468-b454-1308b65cab5e-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/hempe-hempe-range-gift-box-set-save-10-32382485561521.jpg",
+            "title": "HEMPE Range Gift Set",
+            "text": "<p>The ultimate HEMPE Gift Set containing all of our topical CBD products.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://products/cbd-gift-box-set"
+          }
+        }
+      },
+      "block_order": [
+        "template--16097489453233__b1ecbf0c-8883-4468-b454-1308b65cab5e-column-2",
+        "template--16097489453233__b1ecbf0c-8883-4468-b454-1308b65cab5e-column-1",
+        "template--16097489453233__b1ecbf0c-8883-4468-b454-1308b65cab5e-column-3"
+      ],
+      "custom_css": [
+        "h3 {font-size: calc(var(--font-heading-scale) * 2.2rem);}",
+        ".title-wrapper-with-link {justify-content: center;}",
+        ".content-container {display: flex; flex-direction: column;}",
+        ".multicolumn-card__info {flex-grow: 1; text-align: center; display: inline-flex; height: auto; align-items: center; flex-direction: column;}",
+        ".multicolumn-card__info .rte {margin-bottom: 24px;}",
+        ".multicolumn-card__info .button {margin-top: auto;}"
+      ],
+      "settings": {
+        "title": "Shop Our CBD Gift Sets",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-d8b74ac0-1607-4212-8b75-fa581019b8ae",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ticker_UBBAxK": {
+      "type": "ticker",
+      "blocks": {
+        "image_QRxJCH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Arnols_Sports.jpg"
+          }
+        },
+        "image_qizwj4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Arnols_Spots_Festival_UK.jpg"
+          }
+        },
+        "image_CE8het": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Battle_for_middleground.jpg"
+          }
+        },
+        "image_DdtbRd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BBC_Gardeners_Live.jpg"
+          }
+        },
+        "image_xVkdGj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Best_Practice.jpg"
+          }
+        },
+        "image_mCYDnn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Ragnarok.jpg"
+          }
+        },
+        "image_7QU938": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BFM_Soldiers.jpg"
+          }
+        },
+        "image_f37D93": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Birminham_running_festival.jpg"
+          }
+        },
+        "image_Ngtmak": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cheshire_half_marathon.jpg"
+          }
+        },
+        "image_Ecbzqx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Disabled_strongman.jpg"
+          }
+        },
+        "image_qRNU37": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Elevate.jpg"
+          }
+        },
+        "image_NxUzTX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Garden_Press.jpg"
+          }
+        },
+        "image_7GCqTD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Glee.jpg"
+          }
+        },
+        "image_T9kYeX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/MrOlympia.jpg"
+          }
+        },
+        "image_XWLPQ3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/NationalConvenience.jpg"
+          }
+        },
+        "image_XzHmEB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/NationalRunning_Show.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_QRxJCH",
+        "image_qizwj4",
+        "image_CE8het",
+        "image_DdtbRd",
+        "image_xVkdGj",
+        "image_mCYDnn",
+        "image_7QU938",
+        "image_f37D93",
+        "image_Ngtmak",
+        "image_Ecbzqx",
+        "image_qRNU37",
+        "image_NxUzTX",
+        "image_7GCqTD",
+        "image_T9kYeX",
+        "image_XWLPQ3",
+        "image_XzHmEB"
+      ],
+      "custom_css": [
+        ".slide img {height: auto; max-width: 300px;}",
+        ".title-wrapper-with-link {justify-content: center;}"
+      ],
+      "settings": {
+        "title": "As Experienced At",
+        "heading_size": "h1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "hero_jwhgQx",
+    "1fe29708-4491-4c62-a1ca-4b229f903b40",
+    "featured_collection",
+    "trustpilot_ULAfTw",
+    "testimonials_38rXkQ",
+    "ticker_hT7rqW",
+    "multirow_3T7DRp",
+    "icon_list_QdtCP3",
+    "89ee7c32-c7d1-47b2-8edb-79b74280bcc1",
+    "838af957-3349-4864-bc30-d034f003de5b",
+    "20bc7d20-25de-48aa-b433-7e478f522fde",
+    "b1ecbf0c-8883-4468-b454-1308b65cab5e",
+    "ticker_UBBAxK"
+  ]
+}

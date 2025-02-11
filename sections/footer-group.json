@@ -1,0 +1,65 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "bbddfc43-133e-4e31-a2b5-6b055fc5bcf7": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer Care",
+            "menu": "support"
+          }
+        },
+        "38ab9b9d-e8db-4760-a983-30b593d42e88": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Legal",
+            "menu": "legal"
+          }
+        },
+        "03228cb6-b948-4bfc-adad-b97e2c9bf028": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Explore",
+            "menu": "the-small-print"
+          }
+        },
+        "a9ade4e0-d67f-4263-9e23-2afc582e9a78": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Account",
+            "menu": "account"
+          }
+        }
+      },
+      "block_order": [
+        "bbddfc43-133e-4e31-a2b5-6b055fc5bcf7",
+        "38ab9b9d-e8db-4760-a983-30b593d42e88",
+        "03228cb6-b948-4bfc-adad-b97e2c9bf028",
+        "a9ade4e0-d67f-4263-9e23-2afc582e9a78"
+      ],
+      "custom_css": [
+        ".footer-block__heading {font-weight: bold}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-d8b74ac0-1607-4212-8b75-fa581019b8ae",
+        "newsletter_enable": true,
+        "newsletter_heading": "Newsletter",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

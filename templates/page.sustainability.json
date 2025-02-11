@@ -1,0 +1,271 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-new-default",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "multirow_8dWadw": {
+      "type": "multirow",
+      "blocks": {
+        "row_43Dxjt": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Bamboo.jpg",
+            "caption": "",
+            "heading": "Our Environmental Choices",
+            "text": "<p>The climate is changing. We are moving ever closer to a point of no return. This affects every person on our planet.</p><p>And so every person shares this responsibility to make individual changes and to do their best for the planet.</p><p>However, it is businesses that have affected the environment on a much larger scale than individuals – and so businesses must take the lead and change business practices so that the environment is always an important factor in decision making.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_7WC6NC": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/hempe_plant_2_38844b63-f4b0-4869-9b59-ca5517725a8c.jpg",
+            "caption": "",
+            "heading": "The Hemp Plant",
+            "text": "<p>Hemp is a purifier. It cleans the air we breathe by removing carbon dioxide from the atmosphere. For every tonne of hemp grown it removes 1.63 tons of carbon from the air. Hemp is actually more effective at removing carbon dioxide from the air than trees and the crop is replanted three times a year! </p><p>The strength of our HEMPE products comes directly from the strength of the hemp plant and from other precious natural ingredients that are derived from plants. We extract the benefits of each plant, without harming ecosystems, and always favour locally grown plants. </p><p>It goes without saying that we have never and would never harvest endangered plants and we follow international guidelines for environmental protection.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_43Dxjt",
+        "row_7WC6NC"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-right",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "icon_list_9QTAgr": {
+      "type": "icon-list",
+      "blocks": {
+        "icon_pMjTAa": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_Plant_Based.png",
+            "title": "Plant Based"
+          }
+        },
+        "icon_7UGD34": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_Sustainable.png",
+            "title": "Sustainable"
+          }
+        },
+        "icon_A9PQkt": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_Cruelty_Free_b0b432d2-f9c1-443a-b5f6-8e402ae6807d.png",
+            "title": "Cruelty Free"
+          }
+        },
+        "icon_8MGgRJ": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_Eco_Friendly.png",
+            "title": "Eco Friendly"
+          }
+        }
+      },
+      "block_order": [
+        "icon_pMjTAa",
+        "icon_7UGD34",
+        "icon_A9PQkt",
+        "icon_8MGgRJ"
+      ],
+      "custom_css": [
+        ".icon-boxes {grid-template-rows: repeat(1, 1fr);}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "background_style": "primary",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_MMMCJj": {
+      "type": "multirow",
+      "blocks": {
+        "row_4khGDY": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_footprint.jpg",
+            "caption": "",
+            "heading": "Reducing Our Footprint",
+            "text": "<p>We are committed to using fewer resources, and creating less waste. We strive to always weigh up the environmental consequences of our actions with the ultimate goal of reducing our carbon footprint. From the very beginning of the company’s formation, we have always strived to run a business that is as eco-friendly and green as possible, even down to running electric cars for company vehicles. </p><p>All of our Hempe products are packed in recyclable materials such as tin, glass or reusable plastics. They are shipped to consumers in cardboard boxes with water soluble packing peanuts and the tape used to seal the boxes is paper based. </p><p>When we have matured and increased our footprint globally, we commit to undertaking a carbon assessment so we can fully understand our overall footprint and how we can reduce it in the future.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_4khGDY"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-right",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "icon_list_VCtMgd": {
+      "type": "icon-list",
+      "blocks": {
+        "icon_wNwYV8": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_Natural_Ingredients_e401d206-5950-4076-9a25-c57c6654b7bb.png",
+            "title": "Natural Ingredients"
+          }
+        },
+        "icon_GxBgGA": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_Paraben_Free_35d2bc50-605e-499a-9075-cb38a45b8a27.png",
+            "title": "Paraben Free"
+          }
+        },
+        "icon_xfUACQ": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_Sulphate_Free_18d08408-e285-4589-a1eb-a54eb98d1b47.png",
+            "title": "Sulphate Free"
+          }
+        },
+        "icon_twVYcp": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Hempe_icons_01_GMO_Free.png",
+            "title": "GMO Free"
+          }
+        }
+      },
+      "block_order": [
+        "icon_wNwYV8",
+        "icon_GxBgGA",
+        "icon_xfUACQ",
+        "icon_twVYcp"
+      ],
+      "custom_css": [
+        ".icon-boxes {grid-template-rows: repeat(1, 1fr);}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "background_style": "primary",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_38iGUW": {
+      "type": "multirow",
+      "blocks": {
+        "row_x3FzGk": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/hempe_sustainability_683d6551-f9c3-454b-abd8-3745b4d8c41b.jpg",
+            "caption": "",
+            "heading": "Local Sustainability",
+            "text": "<p>Local sustainability is important to us. You will find us involved in ensuring that our lovely beaches on the south coast of England are clean and litter free through our<a href=\"https://www.litterfreecoastandsea.co.uk/businesses-2/award-holders/\"> <span style=\"text-decoration:underline\">Litter Free Coast & Sea </span></a>involvement – it’s important that plastic doesn’t make its way into the sea..</p><p>Our company is committed now, and in the future, to being an entity that represents sustainability wherever possible. We strive to ensure all areas of our operation safeguard the future of our planet for generations to come. Our goal is not only to respect our customers but to respect this beautiful place that we call home.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_x3FzGk"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_iGLYxn": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Our Products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "cbd-relief-products",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multirow_8dWadw",
+    "icon_list_9QTAgr",
+    "multirow_MMMCJj",
+    "icon_list_VCtMgd",
+    "multirow_38iGUW",
+    "featured_collection_iGLYxn"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "parent": "index.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {
+    "icon_list_QdtCP3": {
+      "settings": {},
+      "blocks": {
+        "icon_yiekEq": {
+          "disabled": true,
+          "settings": {}
+        },
+        "icon_ceTLEt": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    }
+  }
+}

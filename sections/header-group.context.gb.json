@@ -1,0 +1,12 @@
+{
+  "parent": "header-group.json",
+  "context": {
+    "market": "gb"
+  },
+  "sections": {
+    "announcement-bar": {
+      "settings": {},
+      "blocks": {}
+    }
+  }
+}

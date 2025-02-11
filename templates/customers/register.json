@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-register",
+      "custom_css": [
+        ".register button:not(.button--tertiary) {background-color: #306D4C; border-color: #306D4C;}",
+        ".register button:not(.button--tertiary):after {box-shadow: none;}"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

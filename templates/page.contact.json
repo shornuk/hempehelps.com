@@ -1,0 +1,37 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "shorn_map_7MmUy9": {
+      "type": "shorn-map",
+      "settings": {
+        "heading": "Find Us",
+        "text": "<p>HEMPE<br\/>Unit 18, Axis 31<br\/>Woolsbridge Industrial Park<br\/>Oakfield Road<br\/>Wimborne<br\/>BH21 6FE<\/p>",
+        "custom_liquid": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d2519.410704920155!2d-1.862493323131401!3d50.8420784590883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873afb151777ff9%3A0xe90fac89c8239c94!2sHEMPE!5e0!3m2!1sen!2sie!4v1709122522287!5m2!1sen!2sie\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
+        "heading_size": "h1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "form",
+    "shorn_map_7MmUy9"
+  ]
+}

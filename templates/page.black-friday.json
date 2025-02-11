@@ -1,0 +1,60 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "responsive_images_7GcQcL": {
+      "type": "responsive-images",
+      "settings": {
+        "mobile_image": "shopify://shop_images/BlackFriday_Hempe_Mobile_2875_x_3468px_2024_02-01.jpg",
+        "desktop_image": "shopify://shop_images/BlackFriday_Hempe_2875_x_600px_2024_02-01.jpg"
+      }
+    },
+    "main": {
+      "type": "page-new-default",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "featured_collection_WiRTMf": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "cbd-relief-products",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "responsive_images_7GcQcL",
+    "main",
+    "featured_collection_WiRTMf"
+  ]
+}

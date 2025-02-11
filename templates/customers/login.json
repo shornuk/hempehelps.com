@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-login",
+      "custom_css": [
+        ".login button:not(.button--tertiary) {background-color: #306D4C; border-color: #306D4C;}",
+        ".login button:not(.button--tertiary):after {box-shadow: none;}"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

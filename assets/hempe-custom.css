@@ -1,0 +1,48 @@
+.drawer .button:not(.button--tertiary),
+.cart__checkout-button:not(.button--tertiary) {
+  background-color: #306D47;
+  border-color: #306D47;
+}
+.drawer .button:not(.button--tertiary):after,
+.cart__checkout-button:not(.button--tertiary):after {
+  box-shadow: none;
+}
+
+.product-card-wrapper h3 a {
+  font-size: calc(var(--font-heading-scale) * 1.9rem) !important;
+}
+.product-card-wrapper .card__information {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.shipping-message {
+  background-color: #ECECEC;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.product-card-wrapper .card-information {
+  text-align: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card-wrapper .card-information .price {
+  margin-top: auto !important;
+}
+
+body {
+    -webkit-font-feature-settings: "lnum";
+       -moz-font-feature-settings: "lnum";
+        -ms-font-feature-settings: "lnum";
+         -o-font-feature-settings: "lnum";
+            font-feature-settings: "lnum";
+}

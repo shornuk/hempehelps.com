@@ -1,0 +1,18 @@
+{
+  "parent": "product.bundle-product.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "icon_with_text_4cmmQi": {
+          "settings": {
+            "heading_3": ""
+          }
+        }
+      }
+    }
+  }
+}

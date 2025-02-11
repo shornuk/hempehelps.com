@@ -1,0 +1,23 @@
+{
+  "parent": "header-group.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {
+    "announcement-bar": {
+      "settings": {},
+      "blocks": {
+        "announcement_zQww6f": {
+          "disabled": true,
+          "settings": {}
+        },
+        "announcement_rAJEQE": {
+          "disabled": false,
+          "settings": {
+            "text": "SPECIAL OFFER **FREE US SHIPPING**"
+          }
+        }
+      }
+    }
+  }
+}

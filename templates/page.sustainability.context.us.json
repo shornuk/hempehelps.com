@@ -1,0 +1,17 @@
+{
+  "parent": "page.sustainability.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {
+    "icon_list_9QTAgr": {
+      "settings": {},
+      "blocks": {
+        "icon_A9PQkt": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    }
+  }
+}

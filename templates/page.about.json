@@ -1,0 +1,102 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-new-default",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "multirow_9xQech": {
+      "type": "multirow",
+      "blocks": {
+        "row_MKQ9pJ": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Farard_IMG_8927_1.jpg",
+            "caption": "",
+            "heading": "Origin",
+            "text": "<p>My name is Farard Darver, the Founder and CEO of Healthcare International Research (the company behind the HEMPE brand) and I am a former British Army Officer and Green Beret Commando.  I served in the British Army for over 16 years and was deployed on operations and exercises both domestically and internationally including two tours in Afghanistan. During the latter years of my service, I began to notice the discomfort my body was suffering from, brought on by many years of arduous activity which resulted in a total left hip replacement at the ripe old age of 43!<\/p><p>I realised I wasn’t alone among my fellow soldiers and the reliance on painkillers seemed to become the norm before and after training, activities or sport. Many of us were regularly taking ibuprofen before army rugby matches or long marches and then finishing with painkillers afterwards. A part of me realised that this is not sustainable and certainly not very good for me or my liver…and so the foundation of HEMPE was laid.<\/p><p>Like everybody else, I had heard about CBD and the potential healing effects it had but was initially very sceptical and dismissive of it since after all…it’s a drug, right? I couldn’t have been more wrong. The hemp plant is one of the most versatile plants on the planet and you can find elements of it in clothes, food, building materials, drinks, and skincare products. Seeing first-hand the extent that CBD was helping people around me with a range of issues, I knew I had to investigate further and my investigations led me to the Czech Republic.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_CQj8D4": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Scientist.jpg",
+            "caption": "",
+            "heading": "R&D",
+            "text": "<p>HEMPE products are formulated using over 60 years of research by world renowned scientists based in the Czech Republic. I discovered in Prague that in 1955 Prof. Jan Kabelik laid the basics of the scientific research into the healing effects of cannabis,pioneering a legacy of research in the Czech Republicthat continues to this day. His colleagues Prof. Zdeněk Krejčí and chemist František Šantavy were the first to discover and isolate cannabidiol acid or CBD. In 1963 Professor Šantavý published the correct absolute configuration of CBD and THC, four years ahead of Profs Raphael Mechoulam and Gaoni in Israel who independently determined and verified the findings. Many of these ground-breaking papers were published behind the Iron Curtain in the Czech language. If they had been published in English, scientific journals of their work would now be cited all over the world. <br\/><br\/>Today this inherited knowledge lays the foundation upon which our HEMPE formulations are created. Our Czech formulators are scientists that not only have access to decades of cannabinoid research but also the world-class expertise in formulation processes and combining bioactive ingredients to deliver the most effective CBD products. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_TJ6jJ7": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/R_D_bf7f0f81-ed9f-41fe-85a6-72f8491f2651.jpg",
+            "caption": "",
+            "heading": "30 Years of Formulation Expertise...",
+            "text": "<p>...leads to a fantastic consumer experience. With our expert team of scientists, we offer deeper TRANSDERMAL penetration of all the skin layers. We get the ingredients, where they need to go!<\/p><p>While all topical and transdermal compounds are applied to the skin, only transdermal formulations are designed to penetrate through the skin layer and exert their effects on deeper or more distant tissues.<\/p><p>Many of the companies that offer CBD in creams and gels do not have the expertise or the delivery systems to get the ingredients to where they can offer relief.<\/p><p>All of our HEMPE products are:<\/p><p>NON GREASY - Formulated precisely to be Non Greasy for a pleasant consumer experience.<\/p><p>SMELL GREAT - Adjusted formula several times to ensure the Smell was satisfying and not too overbearing.<\/p><p>SUPER FAST ABSORPTION -Painstakingly formulated for Super Fast Absorption as we know our consumers like to put their clothes on straight away after application.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_MKQ9pJ",
+        "row_CQj8D4",
+        "row_TJ6jJ7"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_e6bqYB": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Our Products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "cbd-relief-products",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multirow_9xQech",
+    "featured_collection_e6bqYB"
+  ]
+}

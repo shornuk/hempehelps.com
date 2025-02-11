@@ -1,0 +1,305 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_8eNDqp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_A9jMjH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Embrace Lasting Relief with the HEMPE Topical CBD Range",
+            "heading_size": "h2"
+          }
+        },
+        "text_zRcyBi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover the benefits of our HEMPE Natural Relief Collection, your ideal choice for CBD that offers lasting relief. Our carefully curated selection of CBD products, available in a range of sizes, is designed to meet the needs of individuals seeking a natural, effective solution for pain management and recovery.<\/p><p>Our award-winning collection features an array of CBD gels, specifically formulated to provide targeted relief and support muscle and joint recovery. Each topical CBD gel has been crafted using the highest quality ingredients to ensure rapid absorption and fast relief from pain and inflammation.<\/p>"
+          }
+        },
+        "heading_qb7kfy": {
+          "type": "heading",
+          "settings": {
+            "heading": "CBD Muscle Gels",
+            "heading_size": "h2"
+          }
+        },
+        "text_CijATJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Chief among our most celebrated offerings, the Hot Muscle & Joint Gel and Ice Muscle & Joint Gel stand out for their exceptional efficacy in providing targeted relief and supporting recovery. <\/p><p>Our <a href=\"https:\/\/hempehelps.com\/products\/cbd-hot-muscle-joint-gel\"><span style=\"text-decoration:underline\">Hot Muscle & Joint Gel<\/span><\/a>, infused with warming agents, penetrates deeply to soothe aches and ease stiffness, making it an ideal choice for those looking to relax tight muscles and promote circulation. <\/p><p>On the other hand, <a href=\"https:\/\/hempehelps.com\/products\/cbd-ice-muscle-joint-gel\"><span style=\"text-decoration:underline\">HEMPE Ice Muscle & Joint Gel<\/span><\/a> offers a cooling sensation, perfect for reducing inflammation, swelling, and discomfort following physical activity or injury. <\/p><p>Both gels work by harnessing the power of CBD alongside carefully selected natural ingredients to deliver immediate and lasting relief.<\/p><p>To accommodate varying needs and preferences, these indispensable CBD gels are available in both standard 50ml and larger 150ml bottles, ensuring you have the right amount for regular use or more intensive care.<\/p><p>We also offer 10ml travel-sized CBD gel sachets, perfect for on-the-go relief and convenience. These sachets make it easier than ever to experience the benefits of our Hot and Ice CBD Gels, no matter where life takes you.<\/p>"
+          }
+        },
+        "heading_my9Lcd": {
+          "type": "heading",
+          "settings": {
+            "heading": "SOS Skin Balm",
+            "heading_size": "h2"
+          }
+        },
+        "text_nfKK4A": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For those with sensitive skin or specific skincare needs, our <a href=\"https:\/\/hempehelps.com\/products\/cbd-sos-balm\"><span style=\"text-decoration:underline\">HEMPE CBD Skin Balm<\/span><\/a> offers a gentle yet effective option for dry skin relief and skin care.<\/p><p>A handy addition to any handbag, gym bag or travel kit, it's perfect for flare-ups and broken skin emergencies - and great for easing the discomfort of chafing too!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_A9jMjH",
+        "text_zRcyBi",
+        "heading_qb7kfy",
+        "text_CijATJ",
+        "heading_my9Lcd",
+        "text_nfKK4A"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_VRbJfd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TjTBGn": {
+          "type": "heading",
+          "settings": {
+            "heading": "CBD Gift Sets",
+            "heading_size": "h2"
+          }
+        },
+        "text_cbnMbR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For those looking to explore the full range of HEMPE's topical products or searching for a thoughtful gift, our CBD gift sets combine our most popular products, providing a comprehensive approach to natural pain relief for <a href=\"https:\/\/hempehelps.com\/products\/cbd-gym-gels-bundle\"><span style=\"text-decoration:underline\">gym-lovers<\/span><\/a>, <a href=\"https:\/\/hempehelps.com\/products\/cbd-gardening-gift-set\"><span style=\"text-decoration:underline\">gardeners<\/span><\/a> and <a href=\"https:\/\/hempehelps.com\/products\/cbd-gift-box-set\"><span style=\"text-decoration:underline\">all active lifestyles<\/span><\/a> alike.<\/p>"
+          }
+        },
+        "heading_FmD6Ea": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bundle for Better Value",
+            "heading_size": "h2"
+          }
+        },
+        "text_QN7BFK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unlock exceptional savings and enhance your wellness routine with our duo packs, specifically designed to offer you the best of both worlds at a better value. <\/p><p>By choosing either <a href=\"https:\/\/hempehelps.com\/products\/hot-duo-bundle\"><span style=\"text-decoration:underline\">two Hot<\/span><\/a>, <a href=\"https:\/\/hempehelps.com\/products\/ice-duo-bundle\"><span style=\"text-decoration:underline\">two Ice<\/span><\/a>, or <a href=\"https:\/\/hempehelps.com\/products\/cbd-ice-hot-combo-deal\"><span style=\"text-decoration:underline\">one Hot and one Ice CBD gel combo<\/span><\/a> products from our duo bundle range, you can save up to 10% on your purchase. This bundle option not only allows you to experience the dual benefits of both our warming and cooling gels but also ensures you're always prepared with the right solution for your muscle and joint needs. <\/p><p>Whether you're doubling up on your favourite formula or mixing and matching to address different concerns, our duo packs are the perfect way to elevate your pain relief regimen while enjoying significant savings.<\/p>"
+          }
+        },
+        "heading_wKaTRm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Experiences Shared by Our Happy Customers",
+            "heading_size": "h2"
+          }
+        },
+        "text_QHJiCe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover the impact of HEMPE's CBD Relief Products through the experiences of some well-known sporting celebrities and loyal customers alike. Watch their stories and learn how HEMPE has transformed their approach to managing pain and recovery.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TjTBGn",
+        "text_cbnMbR",
+        "heading_FmD6Ea",
+        "text_QN7BFK",
+        "heading_wKaTRm",
+        "text_QHJiCe"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_nDWHw6": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".testimonials {text-align: center;}"
+      ],
+      "settings": {
+        "custom_liquid": "<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }<\/style>\n<div class=\"page-width page-width--narrow\">\n<div class='embed-container'><iframe src='https:\/\/www.youtube.com\/embed\/uOPBSyeVSmU' frameborder='0' allowfullscreen><\/iframe><\/div>\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_Fdtw6R": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mBHD96": {
+          "type": "heading",
+          "settings": {
+            "heading": "Try HEMPE CBD Products for Yourself",
+            "heading_size": "h2"
+          }
+        },
+        "text_z4qCEd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Embark on a journey to natural, effective relief from joint pain, sore muscles and chronic pain recovery with HEMPE CBD Products. Explore our 100% natural topical CBD range of products, experience the truly unique difference, and join the community of satisfied users who've found solace in our natural relief solutions.<\/p><p>Your path to sustained, pain-free wellness begins here.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mBHD96",
+        "text_z4qCEd"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_6p9HPf": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_aTCkBk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes HEMPE CBD gels unique?",
+            "icon": "none",
+            "row_content": "<p>HEMPE CBD gels are formulated with a proprietary blend of natural, active ingredients and high-quality CBD, designed for rapid absorption and immediate relief from muscle and joint discomfort.<\/p><p>The anti-inflammatory properties in our gels get right to the source of discomfort and help improve your everyday life when incorporated as part of your daily routines.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_aPyJhy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are HEMPE products suitable for all skin types? ",
+            "icon": "none",
+            "row_content": "<p>Yes, all of our products, including the skin balm, are developed with all skin types in mind, using completely natural, non-irritating, vegan-friendly formulas to ensure comfort and efficacy for even the most sensitive skin. <\/p><p>As with any new topical skin remedy, we recommend testing on a small area of the skin first.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_RQQqfP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I use HEMPE CBD Gel sachets? ",
+            "icon": "none",
+            "row_content": "<p>If you’ve purchased an official HEMPE CBD gel sachet, simply apply the contents of the sachet to the affected area, massaging gently until fully absorbed. These sachets are perfect for targeted relief whenever you need it.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_idpG3A": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I find a suitable CBD product for a friend interested in natural wellness?",
+            "icon": "none",
+            "row_content": "<p>Absolutely! Anyone seeking relief from sore muscles, achy joints or alternative forms of pain management is ideally suited to giving HEMPE a try.<\/p><p>Our CBD gift sets are the perfect introduction to the benefits of CBD, featuring a selection of innovative products that cater to various needs and preferences and as they’re bundled, they’re 10-15% cheaper than buying each of the separate products individually.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_a9hPWx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where can I learn more about the benefits of CBD?",
+            "icon": "none",
+            "row_content": "<p>In addition to trying our individual products, we encourage you to explore our comprehensive <a href=\"https:\/\/hempehelps.com\/pages\/learn-about-cbd\"><span style=\"text-decoration:underline\">CBD learning resource<\/span><\/a> and more regularly-published <a href=\"https:\/\/hempehelps.com\/blogs\/guides\"><span style=\"text-decoration:underline\">natural relief guides<\/span><\/a> for detailed information on CBD, maximising its benefits, and how to integrate it into your daily wellness routine.<\/p><p>These resources are invaluable for both newcomers to CBD and experienced users alike, offering a deeper understanding of how CBD can enhance your wellness journey.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_aTCkBk",
+        "collapsible_row_aPyJhy",
+        "collapsible_row_RQQqfP",
+        "collapsible_row_idpG3A",
+        "collapsible_row_a9hPWx"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQs About HEMPE CBD Relief Products",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_WCVTMP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bJdzpT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Need more help with HEMPE CBD Relief Products?",
+            "heading_size": "h2"
+          }
+        },
+        "text_nAEqwY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you’ve got any other questions that you’d like answered, please see our<a href=\"https:\/\/hempehelps.com\/pages\/faq\"> <span style=\"text-decoration:underline\">general HEMPE FAQ section<\/span><\/a> or<a href=\"https:\/\/hempehelps.com\/pages\/contact\"> <span style=\"text-decoration:underline\">contact our customer support team<\/span><\/a> today and we’ll be more than happy to assist you!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bJdzpT",
+        "text_nAEqwY"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "rich_text_8eNDqp",
+    "rich_text_VRbJfd",
+    "custom_liquid_nDWHw6",
+    "rich_text_Fdtw6R",
+    "collapsible_content_6p9HPf",
+    "rich_text_WCVTMP"
+  ]
+}

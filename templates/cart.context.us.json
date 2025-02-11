@@ -1,0 +1,38 @@
+{
+  "parent": "cart.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {
+    "rich_text_xtFdg": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "header-9daed0c1665f736b827b069f76531ce1": null,
+        "padding_top": 40,
+        "padding_bottom": 52
+      },
+      "blocks": {
+        "text_x9ByA": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "text": "<p>We process all orders in GBP. While the content of your cart is currently displayed in USD, you will checkout using GBP at the most current exchange rate.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_x9ByA"
+      ]
+    }
+  },
+  "order": [
+    "rich_text_xtFdg",
+    "cart-items",
+    "cart-footer"
+  ]
+}
