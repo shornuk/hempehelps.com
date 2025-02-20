@@ -13,6 +13,124 @@
 
 {% if localization.country.iso_code != 'BR' %}
 
+{%- style -%}
+	
+	.sticky-cta-bar {
+		padding-top: 12px;
+		padding-left: 12px;
+		padding-right: 12px;
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-top: 1px solid #d7d4d4;
+		min-height: 20px;
+		background-color: white;
+	}
+
+	.sticky-cta-bar--content {
+		display: flex;
+		justify-content: center;
+	}
+
+	@supports (margin-bottom: env(safe-area-inset-bottom)){
+		.sticky-cta-bar--content {
+			margin-bottom: env(safe-area-inset-bottom);
+		}
+	}
+
+	.product-form__buttons {
+		display: flex;
+		flex-direction: row-reverse;
+		gap: 12px;	
+	}
+
+  .shopify-payment-button {
+    width: 100%;
+  }
+  .product-form__submit {
+    background-color: #EFEFEF;
+    border-color: #EFEFEF;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .product-form__submit:after,
+  .product-form__submit:hover:after,
+  .button:not([disabled]):hover::after {
+    box-shadow: none;
+    border-color: #EFEFEF;
+  }
+  .shopify-payment-button button {
+    background-color: #066F43;
+    border-color: #066F43;
+    box-shadow: none;
+    text-sie
+  }
+  .shopify-payment-button button:after,
+  .shopify-payment-button button:hover:after
+   {
+    box-shadow: none;
+  }
+
+    .shopify-payment-button button:hover {
+        background-color: #066F43 !important;
+        border-color: #066F43 !important;
+    }
+
+    @media screen and (max-width: 400px) {
+       /* .product-form__buttons {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 6px;
+        }*/
+    }
+    @media screen and (min-width: 768px) and (max-width: 930px) { 
+    .product-form__buttons {
+        flex-direction: column-reverse;
+        gap: 6px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+       .sticky-cta-bar {
+			padding-top: 0;
+			padding-left: 0;
+			padding-right: 0;
+			position: relative;
+			width: 100%;
+			bottom: auto;
+			left: auto;
+			right: auto;
+			border-top: 0px;
+			min-height: auto;
+			background-color: transparent;
+			display: block;
+			justify-content: center;
+		}
+		.sticky-cta-bar--content {
+			display: block;
+			justify-content: center;
+		}
+    }
+
+/*    Update the dynamic buy now button text*/
+    .shopify-payment-button .shopify-payment-button__button--unbranded:after {
+	    content: "Buy Now";
+	    background: inherit;
+	    font-size: inherit;
+	    color: inherit;
+	    height: 100%;
+	    width: 100%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	}
+{%- endstyle -%}
+
 <div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
     {%- liquid
@@ -28,6 +146,7 @@
     -%}
 
     <product-form
+    	id="buttons-original-location"
       class="product-form"
       data-hide-errors="{{ gift_card_recipient_feature_active }}"
       data-section-id="{{ section.id }}"
@@ -47,75 +166,87 @@
         <span class="product-form__error-message"></span>
       </div>
 
-      {%- form 'product',
-        product,
-        id: product_form_id,
-        class: 'form',
-        novalidate: 'novalidate',
-        data-type: 'add-to-cart-form'
-      -%}
-        <input
-          type="hidden"
-          name="id"
-          value="{{ product.selected_or_first_available_variant.id }}"
-          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
-            disabled
-          {% endif %}
-          class="product-variant-id"
-        >
+      <div id="sticky-cta-bar" class="sticky-cta-bar">
+  			<div class="sticky-cta-bar--content">
+  				    {%- form 'product',
+  				      product,
+  				      id: product_form_id,
+  				      class: 'form',
+  				      novalidate: 'novalidate',
+  				      data-type: 'add-to-cart-form'
+  				    -%}
+  				      <input
+  				        type="hidden"
+  				        name="id"
+  				        value="{{ product.selected_or_first_available_variant.id }}"
+  				        disabled
+  				        class="product-variant-id"
+  				      >
 
-        {%- if gift_card_recipient_feature_active -%}
-          {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
-        {%- endif -%}
+  				      {%- if gift_card_recipient_feature_active -%}
+  				        {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
+  				      {%- endif -%}
 
-        <div class="product-form__buttons">
-          {%- liquid
-            assign check_against_inventory = true
-            if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
-              assign check_against_inventory = false
-            endif
-            if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
-              assign quantity_rule_soldout = true
-            endif
-          -%}
-          <button
-            id="ProductSubmitButton-{{ section_id }}"
-            type="submit"
-            name="add"
-            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
-            {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
-              disabled
-            {% endif %}
-          >
-            <span>
-              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                {{ 'products.product.sold_out' | t }}
-              {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
-              {%- endif -%}
-            </span>
-            {%- render 'loading-spinner' -%}
-          </button>
-          {%- if show_dynamic_checkout -%}
-            {{ form | payment_button }}
-          {%- endif -%}
-        </div>
-      {%- endform -%}
-    </product-form>
-  {%- else -%}
-    <div class="product-form">
-      <div class="product-form__buttons form">
-        <button
-          type="submit"
-          name="add"
-          class="product-form__submit button button--full-width button--primary"
-          disabled
-        >
-          {{ 'products.product.sold_out' | t }}
-        </button>
-      </div>
-    </div>
-  {%- endif -%}
+  				      <div class="product-form__buttons">
+  				        {%- liquid
+  				          assign check_against_inventory = true
+  				          if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+  				            assign check_against_inventory = false
+  				          endif
+  				          if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+  				            assign quantity_rule_soldout = true
+  				          endif
+  				        -%}
+  				        <button
+  				          id="ProductSubmitButton-{{ section_id }}"
+  				          type="submit"
+  				          name="add"
+  				          class="product-form__submit button {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+  				          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+  				            disabled
+  				          {% endif %}
+  				        >
+  				          <span>
+  				            {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+  				              {{ 'products.product.sold_out' | t }}
+  				            {%- else -%}
+  				              {{ 'products.product.add_to_cart' | t }}
+  				            {%- endif -%}
+  				          </span>
+  				          <div class="loading-overlay__spinner hidden">
+  				            <svg
+  				              aria-hidden="true"
+  				              focusable="false"
+  				              class="spinner"
+  				              viewBox="0 0 66 66"
+  				              xmlns="http://www.w3.org/2000/svg"
+  				            >
+  				              <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+  				            </svg>
+  				          </div>
+  				        </button>
+  				        {%- if show_dynamic_checkout -%}
+  				          {{ form | payment_button }}
+  				        {%- endif -%}
+  				      </div>
+  				    {%- endform -%}
+  				  </product-form>
+  				{%- else -%}
+  				  <div class="product-form">
+  				    <div class="product-form__buttons form">
+  				      <button
+  				        type="submit"
+  				        name="add"
+  				        class="product-form__submit button button--full-width button--primary"
+  				        disabled
+  				      >
+  				        {{ 'products.product.sold_out' | t }}
+  				      </button>
+  				    </div>
+  				  </div>
+  				{%- endif -%}
+  			</div>
+	 	</div>
 
   {%- if show_pickup_availability -%}
     {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
@@ -150,5 +281,33 @@
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 </div>
+
+<script>
+	(function() {
+	    function moveDiv() {
+	        var div = document.getElementById('sticky-cta-bar');
+	        var originalLocation = document.getElementById('buttons-original-location');
+	        
+	        if (div && originalLocation) {
+	            if (window.innerWidth <= 768) {
+	                document.body.appendChild(div);
+	            } else {
+	                // Move the div back as the second child of the original location
+	                if (originalLocation.children.length > 0) {
+	                    originalLocation.insertBefore(div, originalLocation.children[1]);
+	                } else {
+	                    originalLocation.appendChild(div);
+	                }
+	            }
+	        }
+	    }
+
+	    // Run on load
+	    moveDiv();
+
+	    // Run on resize
+	    window.addEventListener('resize', moveDiv);
+	})();
+</script>
 
 {%- endif -%}
