@@ -29,7 +29,7 @@
         "button_wzXn9q": {
           "type": "button",
           "settings": {
-            "button_label": "Shop",
+            "button_label": "Shop Now",
             "button_link": "shopify://collections/cbd-relief-products",
             "button_style_secondary": false
           }
@@ -57,7 +57,7 @@
         "content_layout": "no-overlap",
         "color_scheme": "scheme-d8b74ac0-1607-4212-8b75-fa581019b8ae",
         "image_behavior": "none",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -118,7 +118,7 @@
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": false,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
@@ -183,7 +183,7 @@
         "button_link": "https://uk.trustpilot.com/review/hir.global",
         "color_scheme": "scheme-d8b74ac0-1607-4212-8b75-fa581019b8ae",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -234,7 +234,7 @@
         "button_label": "",
         "button_link": "",
         "color_scheme": "",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
