@@ -31,6 +31,17 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Add Flux license
+        env:
+          FLUX_USERNAME: ${{ secrets.FLUX_USERNAME }}
+          FLUX_LICENSE_KEY: ${{ secrets.FLUX_LICENSE_KEY }}
+        run: |
+          if [ -z "$FLUX_USERNAME" ] || [ -z "$FLUX_LICENSE_KEY" ]; then
+            echo "::error::FLUX_USERNAME and FLUX_LICENSE_KEY repository secrets are required to install livewire/flux-pro."
+            exit 1
+          fi
+          composer config http-basic.composer.fluxui.dev "$FLUX_USERNAME" "$FLUX_LICENSE_KEY"
+
       - name: Setup Application
         run: composer setup
 
