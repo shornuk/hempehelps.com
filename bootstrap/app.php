@@ -1,5 +1,8 @@
 <?php
 
+use App\Admin\Http\Middleware\EnsureStaff;
+use App\Markets\Http\Middleware\ResolveMarket;
+use App\Seo\Http\Middleware\HandleRedirects;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -12,7 +15,16 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->prepend(ResolveMarket::class);
+        $middleware->append(HandleRedirects::class);
+
+        $middleware->alias([
+            'staff' => EnsureStaff::class,
+        ]);
+
+        $middleware->validateCsrfTokens(except: [
+            'webhooks/shopify*',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(

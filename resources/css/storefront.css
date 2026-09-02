@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+@source '../views/components/layouts/storefront.blade.php';
+@source '../views/shop';
+@source '../views/livewire/shop';
+@source '../views/livewire/auth';
+@source '../views/components/shop';
+@source '../views/components/reviews';
+@source '../views/mail';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+    --color-hempe: #306d47;
+    --color-hempe-dark: #214d32;
+    --color-hempe-light: #e6f0ea;
+    --color-ink: #1b1b18;
+    --color-muted: #5c5c56;
+    --color-paper: #f7f4ee;
+}
+
+@layer base {
+    body {
+        color: var(--color-ink);
+        background: var(--color-paper);
+    }
+
+    a {
+        text-underline-offset: 3px;
+    }
+}
