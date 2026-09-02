@@ -1,7 +1,0 @@
-{
-  "parent": "article.json",
-  "context": {
-    "market": "us"
-  },
-  "sections": {}
-}
