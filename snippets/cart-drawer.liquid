@@ -40,7 +40,7 @@
               >
                 {% render 'icon-close' %}
               </button>
-              <a href="{{ routes.all_products_collection_url }}" class="button">
+              <a href="/collections/cbd-relief-products" class="button">
                 {{ 'general.continue_shopping' | t }}
               </a>
 
@@ -448,7 +448,7 @@
         </form>
       </cart-drawer-items>
 
-      <div class="shipping-message"></div>
+      {% comment %} <div class="shipping-message"></div> {% endcomment %}
       
       <div class="drawer__footer">
         {%- if settings.show_cart_note -%}

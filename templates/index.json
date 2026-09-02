@@ -22,7 +22,7 @@
         "text_YGxhnK": {
           "type": "text",
           "settings": {
-            "text": "<p>HEMPE aim to give our customers the freedom to live life without limitations. Providing relief from those aches, sore muscles and skin complaints that can sometimes hold us back. Scientifically created using over 60 years of research by world renowned scientists.</p><p>FORMULATED FOR FREEDOM.</p>",
+            "text": "<p>HEMPE aim to give our community the freedom to live life without limitations. Providing relief from those aches, sore muscles and skin complaints that can sometimes hold us back. Scientifically created using over 60 years of research by world renowned scientists.</p><p>FORMULATED FOR FREEDOM.</p>",
             "text_style": "body"
           }
         },
@@ -30,7 +30,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/cbd-relief-products",
+            "button_link": "shopify://collections/relief-products",
             "button_style_secondary": false
           }
         }
@@ -45,13 +45,13 @@
         ".image-with-text__content {padding: 2rem 2rem 3rem;}",
         "@media screen and (min-width: 990px) {.image-with-text__content {padding: 4rem 4rem 4rem; }}",
         ".image-with-text__media {border: 0; /* background-color: #e1f5e4; */}",
-        ".image-with-text__text {font-size: calc(var(--font-body-scale) * 1.2rem);}"
+        "/* .image-with-text__text {font-size: calc(var(--font-body-scale) * 1.4rem);} */"
       ],
       "settings": {
         "image": "shopify://shop_images/HEMPE_couplejpg_copy_1.jpg",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -104,7 +104,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "cbd-relief-products",
+        "collection": "relief-products",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
@@ -166,13 +166,14 @@
         "review_AETj8G",
         "review_3eJ6N7"
       ],
+      "disabled": true,
       "custom_css": [
         ".title-wrapper-with-link {justify-content: center;}",
         ".multicolumn-card__info {display: flex; flex-direction: column; height: 100%;}"
       ],
       "settings": {
         "title": "Our Customer Reviews",
-        "reviews-score": "4.9",
+        "reviews-score": "4.8",
         "reviews-label": "Excellent",
         "reviews-count": "200+",
         "heading_size": "h1",
@@ -371,7 +372,7 @@
             "image": "shopify://shop_images/shutterstock_1464683555.jpg",
             "caption": "",
             "heading": "Our Hard-Working Natural Ingredients",
-            "text": "<p>HEMPE relief products are powered by natural sustainable ingredients like Clove Leaf Oil, Cypress Oil, Laurel Leaf Oil, Eucalyptus, Mentha Arvensis, Lavender & Pinus Sylvestrus. We believe that CBD is one of many powerful ingredients derived from plants that if combined and formulated correctly, can provide relief by bringing together the best of Nature and of Science.</p>",
+            "text": "<p>HEMPE relief products are powered by natural sustainable ingredients like Clove Leaf Oil, Cypress Oil, Laurel Leaf Oil, CBD, Eucalyptus, Mentha Arvensis, Lavender & Pinus Sylvestrus. We believe ingredients derived from plants that if combined and formulated correctly, can provide relief by bringing together the best of Nature and of Science.</p>",
             "button_label": "Read More",
             "button_link": "shopify://pages/our-ingredients"
           }
@@ -382,7 +383,7 @@
             "image": "shopify://shop_images/Scientist.jpg",
             "caption": "",
             "heading": "Powered  By Science",
-            "text": "<p>HEMPE products are formulated using over 60 years of CBD research by world renowned scientists. Our formulators have decades of experience combining bioactive ingredients to deliver relief with the most effective topical products that ensure our active ingredients penetrate all the skin layers and exert their soothing effects where they are needed.</p>",
+            "text": "<p>HEMPE products are formulated using over 60 years of research by world renowned scientists. Our formulators have decades of experience combining bioactive ingredients to deliver relief with the most effective topical products that ensure our active ingredients penetrate all the skin layers and exert their soothing effects where they are needed.</p>",
             "button_label": "Read More",
             "button_link": "shopify://pages/our-story"
           }
@@ -662,7 +663,7 @@
         ".multicolumn-card__info .button {margin-top: auto;}"
       ],
       "settings": {
-        "title": "Shop Our CBD Gift Sets",
+        "title": "Shop Our Gift Sets",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",

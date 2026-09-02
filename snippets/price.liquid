@@ -79,15 +79,7 @@
       {%- else -%}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span class="price-item price-item--regular">
-          {%- if localization.market.handle == 'us' -%}
-            <span x-data="{rate: (localStorage.getItem('_x_rate') == 0 || ! localStorage.getItem('_x_rate')) ? fetch('https://api.vatcomply.com/rates?base=GBP')
-                .then(response=> {
-                    return response.json()
-              })
-          .then(data => rate = data.rates.USD) : localStorage.getItem('_x_rate')}" x-text="new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(rate * ('{{ price }}' / 100) )"></span>
-          {%- else -%}
             {{ money_price }}
-          {%- endif -%}
         </span>
       {%- endif -%}
     </div>
@@ -109,7 +101,7 @@
         {{ money_price }}
       </span>
     </div>
-    <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
+    {% comment %} <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
       <span class="price-item price-item--last">
         <span>{{- product.selected_or_first_available_variant.unit_price | money -}}</span>
@@ -122,7 +114,7 @@
           {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
         </span>
       </span>
-    </small>
+    </small> {% endcomment %}
   </div>
   {%- if show_badges -%}
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">

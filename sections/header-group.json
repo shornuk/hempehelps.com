@@ -14,27 +14,19 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_zQww6f": {
-          "type": "announcement",
-          "settings": {
-            "text": "*TRY BEFORE YOU BUY* - ONLY £1.49!",
-            "link": ""
-          }
-        },
         "announcement_rAJEQE": {
           "type": "announcement",
           "settings": {
-            "text": "**FREE UK SHIPPING ON ORDERS OVER £35**",
+            "text": "Free UK Shipping on all orders",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement_zQww6f",
         "announcement_rAJEQE"
       ],
       "custom_css": [
-        "p {font-family: var(--font-body-family); font-weight: 600; font-size: 20px;}"
+        "p {font-family: var(--font-body-family); font-weight: 400; font-size: 16px;}"
       ],
       "settings": {
         "color_scheme": "scheme-01cf0232-bc91-4217-ba3a-354366637960",

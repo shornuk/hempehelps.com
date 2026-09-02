@@ -1,12 +1,21 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/HEMPE_LOGO_CIRCLED.png",
+    "logo": "shopify://shop_images/HEMPE_LOGO_CIRCLED.png",
     "logo_width": 70,
-    "favicon": "shopify:\/\/shop_images\/hempe-favicon.png",
+    "favicon": "shopify://shop_images/hempe-favicon.png",
     "type_header_font": "raleway_n4",
     "heading_scale": 100,
     "type_body_font": "raleway_n4",
-    "body_scale": 120,
+    "body_scale": 100,
     "page_width": 1200,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
@@ -99,17 +108,17 @@
     "sale_badge_color_scheme": "scheme-01cf0232-bc91-4217-ba3a-354366637960",
     "sold_out_badge_color_scheme": "scheme-01cf0232-bc91-4217-ba3a-354366637960",
     "brand_headline": "",
-    "brand_description": "<p>HEMPE is a range of sustainable natural products combining the best natural ingredients with CBD to help with muscle, joint and skin complaints. <\/p>",
-    "brand_image": "shopify:\/\/shop_images\/HEMPE_Logo_Circle.png",
+    "brand_description": "<p>HEMPE is a range of sustainable natural products combining the best natural ingredients with CBD to help with muscle, joint and skin complaints. </p>",
+    "brand_image": "shopify://shop_images/HEMPE_Logo_Circle.png",
     "brand_image_width": 100,
-    "social_facebook_link": "https:\/\/www.facebook.com\/hempehelps",
-    "social_instagram_link": "https:\/\/www.instagram.com\/hempehelps\/",
-    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCbpC53-CJA5GvsxaHT061EQ",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@hempehelps",
-    "social_twitter_link": "https:\/\/x.com\/hempehelps",
+    "social_facebook_link": "https://www.facebook.com/hempehelps",
+    "social_instagram_link": "https://www.instagram.com/hempehelps/",
+    "social_youtube_link": "https://www.youtube.com/channel/UCbpC53-CJA5GvsxaHT061EQ",
+    "social_tiktok_link": "https://www.tiktok.com/@hempehelps",
+    "social_twitter_link": "https://x.com/hempehelps",
     "social_snapchat_link": "",
-    "social_pinterest_link": "https:\/\/www.pinterest.ie\/hempehelps\/",
-    "social_tumblr_link": "https:\/\/www.linkedin.com\/showcase\/h-hempe",
+    "social_pinterest_link": "https://www.pinterest.ie/hempehelps/",
+    "social_tumblr_link": "https://www.linkedin.com/showcase/h-hempe",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
@@ -119,7 +128,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "checkout_logo_image": "shopify:\/\/shop_images\/HEMPE_LOGO_CIRCLED.png",
+    "checkout_logo_image": "shopify://shop_images/HEMPE_LOGO_CIRCLED.png",
     "checkout_logo_position": "center",
     "checkout_logo_size": "large",
     "checkout_sidebar_background_color": "#306d47",
@@ -142,14 +151,33 @@
     "content_for_index": [],
     "blocks": {
       "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {}
       },
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
+      },
+      "3138269044488530766": {
+        "type": "shopify://apps/uppromote-affiliate/blocks/core-script/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "disabled": false,
+        "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": true,
+        "settings": {
+          "greeting_message": "",
+          "button_color": "#000000",
+          "secondary_color": "#ffffff",
+          "ternary_color": "#6a6a6a",
+          "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest"
+        }
       }
     },
     "color_schemes": {
@@ -399,7 +427,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",

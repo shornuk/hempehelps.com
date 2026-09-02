@@ -9,6 +9,9 @@
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
+
+{{ 'component-variant-cards.css' | asset_url | stylesheet_tag }}
+
 {%- unless product.has_only_default_variant -%}
   <variant-selects
     id="variant-selects-{{ section.id }}"
@@ -33,7 +36,13 @@
           endif
         endif
       -%}
-      {%- if picker_type == 'swatch' -%}
+      {%- if picker_type == 'button' and product.options.size == 1 -%}
+        {% render 'product-variant-cards',
+          product: product,
+          option: option,
+          product_form_id: product_form_id
+        %}
+      {%- elsif picker_type == 'swatch' -%}
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
             {{ option.name }}:

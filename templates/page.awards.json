@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -13,10 +22,10 @@
         "row_RjrtGM": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/jbell.png",
+            "image": "shopify://shop_images/jbell.png",
             "caption": "",
             "heading": "Our Award Winning HEMPE Range",
-            "text": "<p>HEMPE came runner up in the John Bell & Croyden 225th Anniversary 'New Brands' Competition, achieving a listing within the store, of what is the UK's most prestigious and most renowned pharmacy.<br\/><br\/>HEMPE also won a 2023 'Best in Wellness' Award from Tatler a distinguished British fashion and wellbeing magazine.<\/p>",
+            "text": "<p>HEMPE came runner up in the John Bell & Croyden 225th Anniversary 'New Brands' Competition, achieving a listing within the store, of what is the UK's most prestigious and most renowned pharmacy.<br/><br/>HEMPE also won a 2023 'Best in Wellness' Award from Tatler a distinguished British fashion and wellbeing magazine.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -47,49 +56,49 @@
         "image_xrpPY6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Logos_WomensHealth_2.jpg"
+            "image": "shopify://shop_images/Logos_WomensHealth_2.jpg"
           }
         },
         "image_LgrNJX": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Logos_DigitalSpy.jpg"
+            "image": "shopify://shop_images/Logos_DigitalSpy.jpg"
           }
         },
         "image_CLyABN": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Logos_Cosmopolitan_1.jpg"
+            "image": "shopify://shop_images/Logos_Cosmopolitan_1.jpg"
           }
         },
         "image_m8bhtG": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Logos_RunnersWorld.jpg"
+            "image": "shopify://shop_images/Logos_RunnersWorld.jpg"
           }
         },
         "image_VFdxjY": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Logos_DailyMail_copy.jpg"
+            "image": "shopify://shop_images/Logos_DailyMail_copy.jpg"
           }
         },
         "image_ddPK8i": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Logos_Mans_Health_copy_e2b1a99f-7fd7-4cf4-9391-3700787b1573.jpg"
+            "image": "shopify://shop_images/Logos_Mans_Health_copy_e2b1a99f-7fd7-4cf4-9391-3700787b1573.jpg"
           }
         },
         "image_rq8Epj": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Logos_Yahoo_copy.jpg"
+            "image": "shopify://shop_images/Logos_Yahoo_copy.jpg"
           }
         },
         "image_Rh4AEr": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Logos_GoodHousekeeping_1.jpg"
+            "image": "shopify://shop_images/Logos_GoodHousekeeping_1.jpg"
           }
         }
       },
@@ -123,7 +132,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "cbd-relief-products",
+        "collection": "relief-products",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,

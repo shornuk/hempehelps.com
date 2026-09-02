@@ -1,0 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collabs": {
+      "type": "apps",
+      "blocks": {
+        "030f73ee-f40b-46ea-8eeb-9e3d0548f613": {
+          "type": "shopify://apps/collabs/blocks/application-page/54758706-9f25-4fa9-a553-64720a4c998b",
+          "settings": {
+            "heading": "Join the HEMPE community"
+          }
+        }
+      },
+      "block_order": [
+        "030f73ee-f40b-46ea-8eeb-9e3d0548f613"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "collabs"
+  ]
+}

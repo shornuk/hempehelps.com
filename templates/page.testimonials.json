@@ -1,0 +1,91 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-new-default",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "testimonials_7G38V4": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_zhdf6f": {
+          "type": "testimonial",
+          "settings": {
+            "embed": "<iframe src=\"https://www.instagram.com/reel/DGYxR4pPOJS/embed/\" allowtransparency=\"true\" allowfullscreen=\"true\">\n            </iframe>"
+          }
+        },
+        "testimonial_ddyD8T": {
+          "type": "testimonial",
+          "settings": {
+            "embed": "<iframe src=\"https://www.instagram.com/reel/CwUsfe0NXB8/embed/\" allowtransparency=\"true\" allowfullscreen=\"true\">\n            </iframe>"
+          }
+        },
+        "testimonial_M9rtG9": {
+          "type": "testimonial",
+          "settings": {
+            "embed": "<iframe src=\"https://www.instagram.com/reel/CwF_dFgrCTr/embed/\" allowtransparency=\"true\" allowfullscreen=\"true\">\n            </iframe>"
+          }
+        },
+        "testimonial_DVweex": {
+          "type": "testimonial",
+          "settings": {
+            "embed": "<iframe src=\"https://www.instagram.com/reel/DHg2ljiBmX-/embed/\" allowtransparency=\"true\" allowfullscreen=\"true\">\n            </iframe>"
+          }
+        },
+        "testimonial_UAhRyB": {
+          "type": "testimonial",
+          "settings": {
+            "embed": "<iframe src=\"https://www.instagram.com/reel/DGgRWoTJblM/embed/\" allowtransparency=\"true\" allowfullscreen=\"true\">\n            </iframe>"
+          }
+        },
+        "testimonial_aaKGpY": {
+          "type": "testimonial",
+          "settings": {
+            "embed": "<iframe src=\"https://www.instagram.com/reel/DEkrQMYB1S9/embed/\" allowtransparency=\"true\" allowfullscreen=\"true\">\n            </iframe>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_zhdf6f",
+        "testimonial_ddyD8T",
+        "testimonial_M9rtG9",
+        "testimonial_DVweex",
+        "testimonial_UAhRyB",
+        "testimonial_aaKGpY"
+      ],
+      "custom_css": [
+        ".video-box {position: relative; width: 100%; padding-bottom: 190%; height: 0; overflow: hidden; border: 1px solid #d6dbe2;}",
+        ".video-box iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "testimonials_7G38V4"
+  ]
+}

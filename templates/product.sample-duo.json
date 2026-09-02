@@ -1,0 +1,119 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-sample-duo",
+      "blocks": {
+        "review_hot": {
+          "type": "review",
+          "settings": {
+            "quote": "Top quality gel, worthy purchase and nice way to sample the gel before buying bigger bottle, I've just bought the large one and I'm extremely satisfied with it, works wonders on my lower back pain.",
+            "cite": "Ali — Hot sample"
+          }
+        },
+        "review_ice": {
+          "type": "review",
+          "settings": {
+            "quote": "Superb cooling gel, really packs a punch and helps with my tennis elbow inflammation. Have just ordered more, thank you!",
+            "cite": "Jean — Ice sample"
+          }
+        },
+        "review_hot_2": {
+          "type": "review",
+          "settings": {
+            "quote": "Works so well when combined with the cold gel, you've got a fan for life!",
+            "cite": "Craig — Hot sample"
+          }
+        },
+        "review_ice_2": {
+          "type": "review",
+          "settings": {
+            "quote": "So glad we tried this as had heard some great things about it from lads down the gym, goes really well with the Hot sample we tried too, ready to buy one of each of the bigger ones now.",
+            "cite": "Wayne — Ice sample"
+          }
+        },
+        "faq_postage": {
+          "type": "faq",
+          "settings": {
+            "question": "Why do you charge 99p?",
+            "answer": "<p>The sachets are free. 99p covers Royal Mail postage so we can send a Hot and Ice sachet to your door.</p>"
+          }
+        },
+        "faq_limit": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I order more than one pack?",
+            "answer": "<p>One pack per household. That keeps the offer fair and stops wholesale orders of free samples.</p>"
+          }
+        },
+        "faq_alongside": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use it alongside other products?",
+            "answer": "<p>Yes. HEMPE gels are cosmetics. Follow the directions on the sachet and speak to a healthcare professional if you are unsure.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "review_hot",
+        "review_ice",
+        "review_hot_2",
+        "review_ice_2",
+        "faq_postage",
+        "faq_limit",
+        "faq_alongside"
+      ],
+      "settings": {
+        "dispatch_text": "",
+        "badge": "One pack per household",
+        "heading": "Try both. Just 99p postage.",
+        "subheading": "Get one Hot gel sachet and one Ice gel sachet for free. You just cover the 99p postage.",
+        "price_label": "",
+        "hot_title": "Hot gel",
+        "hot_meta": "1 sachet, 5 ml",
+        "ice_title": "Ice gel",
+        "ice_meta": "1 sachet, 5 ml",
+        "button_label": "Get my sample pack",
+        "trust_1": "UK made",
+        "trust_2": "Lab-tested CBD",
+        "trust_3": "Stocked by Boots",
+        "disclaimer": "",
+        "accordion_usage": "<ul><li>Apply 3-4 times a day and massage until absorbed by skin</li><li>Do not swallow</li><li>Avoid contact with eyes</li><li>Wash hands after use</li><li>If pregnant, always consult your doctor before considering use of any new topical skincare solution</li></ul>",
+        "accordion_storage": "<ul><li>Protect from sunlight</li><li>Store in a cool, dry place</li><li>Keep out of reach of children</li><li>Test on a small area of the skin before full application</li></ul>",
+        "accordion_contents": "<p><strong>Ice Muscle and Joint Gel</strong></p><ul><li>CBD 50mg</li><li>No THC (&lt; 0.000025%)</li></ul><p><strong>Hot Muscle and Joint Gel</strong></p><ul><li>CBD 50mg</li><li>No THC (&lt; 0.000025%)</li></ul>",
+        "accordion_ingredients": "<p>Ice — Aqua, Alcohol Denat., Glycerin, Menthol, Sodium Polyacrylate, Hydrogenated Polydecene, PEG-35 Castor Oil, Hemp Seed Oil, PEG-8 Dimethicone, Tocopherol (Vitamin E), Diheptyl Succinate, Capryloyl Glycerin/Sebacic Acid Copolymer, Mentha Arvensis Herb Oil (Wild Mint), Mentha Piperita Herb Oil (Peppermint), Trideceth-6, Cannabidiol (CBD), Pinus Sylvestris Twig Leaf Oil (Pine), Laurus Nobilis Leaf Oil (Bay Leaf), Limonene, Linalool, Sodium Chloride, Sodium Sulfate, CI 42090.</p><p>Hot — Aqua, Alcohol Denat., Glycerin, PEG-35 Castor Oil, Sodium Polyacrylate, Menthol, Eugenia Caryophyllus Leaf Oil (Clove Leaf), Hydrogenated Polydecene, Eugenol (Clove Oil), Hemp Seed Oil, PEG-8 Dimethicone, Tocopherol (Vitamin E), Vanillyl Butyl Ether, Diheptyl Succinate, Capryloyl Glycerin/Sebacic Acid Copolymer, Trideceth-6, Cannabidiol (CBD), Eucalyptus Globulus Leaf Oil (Eucalyptus), Limonene, Geraniol, Sodium Chloride, Sodium Sulfate, CI 16255.</p><p><a href=\"/pages/our-ingredients\" title=\"HEMPE product ingredients\">More information on HEMPE product ingredients and their benefits</a>.</p>",
+        "expect_heading": "What to expect from each",
+        "expect_hot_title": "Hot",
+        "expect_hot_text": "A gentle warming sensation that helps ease stiffness and get tired muscles moving. Best before activity or when you want heat.",
+        "expect_ice_title": "Ice",
+        "expect_ice_text": "A cooling sensation that helps quiet discomfort after activity. Use after exercise or when you want a cold finish.",
+        "steps_heading": "How it works",
+        "step_1_title": "Claim your pack",
+        "step_1_text": "Pay just 99p postage. No subscription, no hidden extras.",
+        "step_2_title": "Try both",
+        "step_2_text": "Each sachet gives you two to three applications, so you can give both gels a proper try.",
+        "step_3_title": "Keep both in your kit",
+        "step_3_text": "If they earn a place in your routine, move up to the full-size Hot + Ice duo.",
+        "ingredients_heading": "",
+        "ingredients": "",
+        "reviews_heading": "From people who tried it",
+        "faq_heading": "Questions",
+        "sticky_label": "99p postage",
+        "sticky_button": "Claim for 99p",
+        "color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "media_size": "small",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "enable_sticky_info": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": ["main"]
+}

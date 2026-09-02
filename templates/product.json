@@ -12,14 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -32,6 +24,13 @@
           "type": "rating",
           "disabled": true,
           "settings": {}
+        },
+        "custom_liquid_pL8FWn": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<img class=\"nsf-logo\" src=\"https://cdn.shopify.com/s/files/1/0569/1883/5377/files/nsf-logo-color.png?v=1738448185\">\n\n<style>\n.nsf-logo {\nwidth: 120px;\nmargin-bottom: 0px;\n}\n</style>"
+          }
         },
         "icon_with_text_4cmmQi": {
           "type": "icon-with-text",
@@ -56,6 +55,13 @@
           "type": "price",
           "settings": {}
         },
+        "custom_liquid_zKWcGL": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% comment %} Custom Variant Picker Cards {% endcomment %}\n\n<style>\n  .variant-cards-wrapper {\n    display: flex;\n    flex-direction: column;\n    gap: 10px;\n    margin: 16px 0;\n  }\n\n  .variant-card {\n    display: flex;\n    align-items: center;\n    gap: 14px;\n    padding: 14px 16px;\n    border: 2px solid #e5e7eb;\n    border-radius: 12px;\n    background: #fff;\n    box-shadow: 0 1px 4px rgba(0,0,0,0.06);\n    cursor: pointer;\n    transition: border-color 0.2s ease, box-shadow 0.2s ease;\n  }\n\n  .variant-card:hover {\n    border-color: #b0c4b1;\n    box-shadow: 0 2px 8px rgba(0,0,0,0.1);\n  }\n\n  .variant-card.is-active {\n    border-color: #2d6a4f;\n    box-shadow: 0 2px 10px rgba(45,106,79,0.15);\n  }\n\n  .variant-card__image {\n    width: 56px;\n    height: 56px;\n    object-fit: contain;\n    border-radius: 6px;\n    flex-shrink: 0;\n  }\n\n  .variant-card__image-placeholder {\n    width: 56px;\n    height: 56px;\n    background: #f3f4f6;\n    border-radius: 6px;\n    flex-shrink: 0;\n  }\n\n  .variant-card__info {\n    flex: 1;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    flex-wrap: wrap;\n  }\n\n  .variant-card__title {\n    font-size: 15px;\n    font-weight: 600;\n    color: #111;\n  }\n\n  .variant-card__badge {\n    background: #f5c842;\n    color: #1a1a1a;\n    font-size: 11px;\n    font-weight: 700;\n    letter-spacing: 0.04em;\n    padding: 3px 10px;\n    border-radius: 20px;\n    text-transform: uppercase;\n    white-space: nowrap;\n  }\n\n  .variant-card__pricing {\n    margin-left: auto;\n    text-align: right;\n    flex-shrink: 0;\n  }\n\n  .variant-card__price {\n    font-size: 17px;\n    font-weight: 700;\n    color: #111;\n  }\n\n  .variant-card__unit-price {\n    font-size: 12px;\n    color: #6b7280;\n    margin-top: 2px;\n  }\n\n  @media (max-width: 480px) {\n    .variant-card__price {\n      font-size: 15px;\n    }\n    .variant-card__title {\n      font-size: 14px;\n    }\n  }\n</style>\n\n<div class=\"variant-cards-wrapper\" id=\"variant-cards-wrapper\">\n  {%- for variant in product.variants -%}\n    {%- assign unit_price_meta = variant.metafields.custom.unit_price | default: '' -%}\n    {%- assign is_popular_meta = variant.metafields.custom.most_popular | default: false -%}\n\n    <div\n      class=\"variant-card{% if forloop.first %} is-active{% endif %}\"\n      data-variant-id=\"{{ variant.id }}\"\n      data-variant-url=\"{{ product.url }}?variant={{ variant.id }}\"\n      role=\"button\"\n      tabindex=\"0\"\n      aria-label=\"Select {{ variant.title }}\"\n    >\n      {%- if variant.image -%}\n        <img\n          class=\"variant-card__image\"\n          src=\"{{ variant.image | image_url: width: 120 }}\"\n          alt=\"{{ variant.title }}\"\n          loading=\"lazy\"\n          width=\"56\"\n          height=\"56\"\n        >\n      {%- elsif product.featured_image -%}\n        <img\n          class=\"variant-card__image\"\n          src=\"{{ product.featured_image | image_url: width: 120 }}\"\n          alt=\"{{ variant.title }}\"\n          loading=\"lazy\"\n          width=\"56\"\n          height=\"56\"\n        >\n      {%- else -%}\n        <div class=\"variant-card__image-placeholder\"></div>\n      {%- endif -%}\n\n      <div class=\"variant-card__info\">\n        <span class=\"variant-card__title\">{{ variant.title }}</span>\n        {%- if is_popular_meta == 'true' or is_popular_meta == true -%}\n          <span class=\"variant-card__badge\">Most Popular</span>\n        {%- endif -%}\n      </div>\n\n      <div class=\"variant-card__pricing\">\n        <div class=\"variant-card__price\">{{ variant.price | money }}</div>\n        {%- if unit_price_meta != '' -%}\n          <div class=\"variant-card__unit-price\">{{ unit_price_meta }}</div>\n        {%- endif -%}\n      </div>\n    </div>\n  {%- endfor -%}\n</div>\n\n<script>\n  (function() {\n    const wrapper = document.getElementById('variant-cards-wrapper');\n    if (!wrapper) return;\n\n    const cards = wrapper.querySelectorAll('.variant-card');\n\n    function selectVariant(card) {\n      // Update active state\n      cards.forEach(c => c.classList.remove('is-active'));\n      card.classList.add('is-active');\n\n      const variantId = card.dataset.variantId;\n\n      // Update URL without reload\n      const url = new URL(window.location.href);\n      url.searchParams.set('variant', variantId);\n      window.history.replaceState({}, '', url.toString());\n\n      // Update the native variant select/input FIRST\n      const nativeSelect = document.querySelector('select[name=\"id\"], input[name=\"id\"]');\n      if (nativeSelect) {\n        nativeSelect.value = variantId;\n        nativeSelect.dispatchEvent(new Event('change', { bubbles: true }));\n      }\n\n      // Dispatch variant change event for themes that listen to it\n      document.dispatchEvent(new CustomEvent('variant:changed', {\n        detail: { variantId: parseInt(variantId) }\n      }));\n\n      // Fetch updated section HTML for price/button state only\n      fetch(`${card.dataset.variantUrl}&section_id={{ section.id }}`)\n        .then(res => res.text())\n        .then(html => {\n          const doc = new DOMParser().parseFromString(html, 'text/html');\n\n          // Update price display only\n          const newPrice = doc.querySelector('.price, [data-price], .product__price');\n          const currentPrice = document.querySelector('.price, [data-price], .product__price');\n          if (newPrice && currentPrice) currentPrice.innerHTML = newPrice.innerHTML;\n\n          // Update add to cart button state only (disabled/text), not the form itself\n          const newBtn = doc.querySelector('[name=\"add\"], .product-form__submit');\n          const currentBtn = document.querySelector('[name=\"add\"], .product-form__submit');\n          if (newBtn && currentBtn) {\n            currentBtn.disabled = newBtn.disabled;\n            currentBtn.textContent = newBtn.textContent;\n          }\n\n          // Re-apply the correct variant ID after fetch (in case the fetch overwrote it)\n          const nativeSel = document.querySelector('select[name=\"id\"], input[name=\"id\"]');\n          if (nativeSel && nativeSel.value !== variantId) {\n            nativeSel.value = variantId;\n          }\n        })\n        .catch(() => {});\n    }\n\n    cards.forEach(card => {\n      card.addEventListener('click', () => selectVariant(card));\n      card.addEventListener('keydown', e => {\n        if (e.key === 'Enter' || e.key === ' ') {\n          e.preventDefault();\n          selectVariant(card);\n        }\n      });\n    });\n\n    // Sync with URL on load\n    const urlParams = new URLSearchParams(window.location.search);\n    const activeVariantId = urlParams.get('variant');\n    if (activeVariantId) {\n      const matchingCard = wrapper.querySelector(`[data-variant-id=\"${activeVariantId}\"]`);\n      if (matchingCard) {\n        cards.forEach(c => c.classList.remove('is-active'));\n        matchingCard.classList.add('is-active');\n      }\n    }\n\n    // Set initial variant on page load (no URL param = first variant)\n    const initialCard = wrapper.querySelector('.is-active');\n    if (initialCard) {\n      const variantId = initialCard.dataset.variantId;\n      const nativeSelect = document.querySelector('select[name=\"id\"], input[name=\"id\"]');\n      if (nativeSelect) {\n        nativeSelect.value = variantId;\n      }\n    }\n  })();\n</script>"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -75,10 +81,13 @@
             "show_gift_card_recipient": true
           }
         },
-        "custom_liquid_RXmC7i": {
-          "type": "custom_liquid",
+        "collapsible_tab_qVi4L8": {
+          "type": "collapsible_tab",
           "settings": {
-            "custom_liquid": "{%- if localization.market.handle == 'gb' -%}\n<div class=\"shipping-message\"></div>\n{%- endif -%}"
+            "heading": "Delivery",
+            "icon": "truck",
+            "content": "<p>Free UK shipping as standard. Optional upgrade to 24hr Royal Mail Tracked.</p>",
+            "page": ""
           }
         },
         "collapsible_tab_6daEC8": {
@@ -117,15 +126,6 @@
             "page": ""
           }
         },
-        "collapsible_tab_4ADUFf": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Related products",
-            "icon": "price_tag",
-            "content": "{{ product.metafields.custom.related_products | metafield_tag }}",
-            "page": ""
-          }
-        },
         "complementary_9GgMTa": {
           "type": "complementary",
           "settings": {
@@ -147,32 +147,34 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "judge_me_reviews_preview_badge_mAhJFT",
         "rating_HRMzAU",
+        "custom_liquid_pL8FWn",
         "icon_with_text_4cmmQi",
         "description",
         "price",
+        "custom_liquid_zKWcGL",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "custom_liquid_RXmC7i",
+        "collapsible_tab_qVi4L8",
         "collapsible_tab_6daEC8",
         "collapsible_tab_eVLdHr",
         "collapsible_tab_iCkYBx",
         "collapsible_tab_KjdDtW",
-        "collapsible_tab_4ADUFf",
         "complementary_9GgMTa",
         "share"
       ],
       "custom_css": [
-        ".accordion__title {font-size: calc(var(--font-heading-scale) * 1.8rem);}",
+        "h1 {font-size: calc(var(--font-heading-scale) * 2.8rem);}",
+        ".accordion__title {font-size: calc(var(--font-heading-scale) * 1.6rem);}",
         ".product-form__buttons {width: 100%; max-width: 100%;}",
         ".product__tax.caption {display: none;}",
         ".price {font-size: 24px;}",
-        ".icon-with-text img {width: 54px; height: 54px;}",
-        ".jdgm-prev-badge__text {text-decoration: underline;}"
+        ".icon-with-text img {width: 42px; height: 42px;}",
+        ".icon-with-text .h4 {font-size: 12px;}",
+        ".jdgm-prev-badge__text {text-decoration: underline; font-size: 13px; margin-left: 6px;}"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -287,24 +289,16 @@
       "blocks": {
         "judge_me_reviews_review_widget_tXtDTn": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
         }
       },
       "block_order": [
         "judge_me_reviews_review_widget_tXtDTn"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "1707907850f070f7e6": {
-      "type": "apps",
-      "disabled": true,
-      "custom_css": [
-        ".spr-icon-star {color: #306d4c;}",
-        ".spr-review-header-byline strong {font-weight: 400;}",
-        ".spr-review-header-title {font-size: 20px; line-height: 30px;}",
-        ".spr-review-content-body {font-size: 18px; line-height: 27px;}"
       ],
       "settings": {
         "include_margins": true
@@ -332,11 +326,10 @@
   "order": [
     "main",
     "multicolumn_wVG4xL",
+    "1714428127bdfc0453",
     "collapsible_content_Ebtn7K",
     "custom_liquid_HdJtbc",
     "faqs_yXkgtq",
-    "1714428127bdfc0453",
-    "1707907850f070f7e6",
     "related-products"
   ]
 }

@@ -70,12 +70,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "custom_liquid_ADMwEN": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{%- if localization.market.handle == 'gb' -%}\n<div class=\"shipping-message\"></div>\n{%- endif -%}"
-          }
-        },
         "collapsible_tab_6daEC8": {
           "type": "collapsible_tab",
           "settings": {
@@ -129,7 +123,6 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "custom_liquid_ADMwEN",
         "collapsible_tab_6daEC8",
         "collapsible_tab_eVLdHr",
         "collapsible_tab_iCkYBx",
@@ -258,7 +251,12 @@
       "blocks": {
         "judge_me_reviews_review_widget_ipGPnr": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
         }
       },
       "block_order": [
