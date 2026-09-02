@@ -12,7 +12,7 @@ class ShopifyPocStatusCommand extends Command
 
     public function handle(): int
     {
-        $this->info('Hemp House Phase 0 — re-run against hempehelps.myshopify.com before launch.');
+        $this->info('HEMPEhelps Phase 0 — re-run against hempehelps.myshopify.com before launch.');
         $this->newLine();
 
         $rows = [

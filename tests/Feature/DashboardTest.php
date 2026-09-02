@@ -27,6 +27,6 @@ class DashboardTest extends TestCase
         $this->actingAs(User::factory()->staff()->create())
             ->get('/admin')
             ->assertOk()
-            ->assertSee('Hemp House admin');
+            ->assertSee('HEMPEhelps admin');
     }
 }

@@ -1,4 +1,4 @@
-# HEMPE Hemp House storefront
+# HEMPEhelps storefront
 
 Laravel-owned website. Shopify is the commerce engine.
 

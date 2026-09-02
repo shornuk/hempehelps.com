@@ -73,7 +73,7 @@
 
         <footer class="mt-16 border-t border-black/10 bg-white">
             <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 text-sm text-muted md:flex-row md:justify-between">
-                <p>© {{ date('Y') }} HEMPE. Hemp House.</p>
+                <p>© {{ date('Y') }} HEMPE. HEMPEhelps.</p>
                 <div class="flex gap-4">
                     <a href="{{ $market->url('/pages/contact') }}">Contact</a>
                     <a href="{{ $market->url('/faq') }}">FAQ</a>

@@ -1,5 +1,5 @@
 <div class="space-y-6">
-    <flux:heading size="xl">Hemp House admin</flux:heading>
+    <flux:heading size="xl">HEMPEhelps admin</flux:heading>
     <flux:text>Catalogue, reviews, redirects, and editorial. Flux stays here.</flux:text>
 
     <div class="grid gap-4 md:grid-cols-4">

@@ -1,7 +1,7 @@
-<x-layouts.storefront title="The Hemp House" description="Plant-powered recovery from HEMPE." :schema="app(\App\Seo\Schema::class)->organization()">
+<x-layouts.storefront title="HEMPEhelps" description="Plant-powered recovery from HEMPE." :schema="app(\App\Seo\Schema::class)->organization()">
     <section class="bg-hempe text-white">
         <div class="mx-auto max-w-6xl px-4 py-20">
-            <p class="text-sm uppercase tracking-[0.2em]">Hemp House</p>
+            <p class="text-sm uppercase tracking-[0.2em]">HEMPEhelps</p>
             <h1 class="mt-4 max-w-2xl text-4xl font-semibold leading-tight md:text-6xl">Recovery that starts with plants, not theatre.</h1>
             <p class="mt-6 max-w-xl text-lg text-white/80">Hot gel, ice gel, and the everyday kit our customers actually finish.</p>
             <a href="{{ url('/shop') }}" class="mt-8 inline-block rounded-full bg-white px-6 py-3 text-sm font-semibold text-hempe">Shop HEMPE</a>

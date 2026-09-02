@@ -2,7 +2,7 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "hempehelps/storefront",
     "type": "project",
-    "description": "Hemp House headless Laravel storefront.",
+    "description": "HEMPEhelps headless Laravel storefront.",
     "keywords": [
         "laravel",
         "framework"
