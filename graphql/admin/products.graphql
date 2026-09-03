@@ -1,0 +1,32 @@
+query CatalogSync($cursor: String) {
+  products(first: 50, after: $cursor) {
+    nodes {
+      id
+      handle
+      title
+      status
+      productType
+      vendor
+      tags
+      publishedAt
+      featuredImage { url }
+      variants(first: 50) {
+        nodes {
+          id
+          sku
+          selectedOptions { name value }
+        }
+      }
+    }
+  }
+  collections(first: 50) {
+    nodes {
+      id
+      handle
+      title
+      products(first: 100) {
+        nodes { id }
+      }
+    }
+  }
+}

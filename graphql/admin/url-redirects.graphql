@@ -1,0 +1,9 @@
+query UrlRedirects {
+  urlRedirects(first: 100) {
+    nodes {
+      id
+      path
+      target
+    }
+  }
+}

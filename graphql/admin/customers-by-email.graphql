@@ -1,0 +1,21 @@
+query CustomersByEmail($query: String!) {
+  customers(first: 5, query: $query) {
+    nodes {
+      id
+      email
+      firstName
+      lastName
+      orders(first: 25, reverse: true) {
+        nodes {
+          id
+          name
+          processedAt
+          fulfillmentStatus
+          financialStatus
+          statusPageUrl
+          totalPriceSet { shopMoney { amount currencyCode } }
+        }
+      }
+    }
+  }
+}

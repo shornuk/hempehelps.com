@@ -1,0 +1,26 @@
+query ProductByHandle($handle: String!) {
+  product(handle: $handle) {
+    id
+    handle
+    title
+    descriptionHtml
+    availableForSale
+    vendor
+    productType
+    tags
+    featuredImage { url width height altText }
+    images(first: 20) { nodes { url width height altText } }
+    variants(first: 50) {
+      nodes {
+        id
+        title
+        sku
+        availableForSale
+        quantityAvailable
+        price { amount currencyCode }
+        compareAtPrice { amount currencyCode }
+        selectedOptions { name value }
+      }
+    }
+  }
+}
