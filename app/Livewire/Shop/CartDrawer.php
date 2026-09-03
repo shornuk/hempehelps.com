@@ -8,8 +8,11 @@ use App\Catalog\DTOs\Money;
 use App\Shopify\Exceptions\CartExpiredException;
 use App\Shopify\Exceptions\MissingCredentialsException;
 use App\Shopify\Exceptions\ShopifyException;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use Livewire\Features\SupportRedirects\Redirector;
 
 class CartDrawer extends Component
 {
@@ -63,7 +66,7 @@ class CartDrawer extends Component
         }
     }
 
-    public function checkout(CartService $cart)
+    public function checkout(CartService $cart): Redirector|RedirectResponse|null
     {
         try {
             $gl = request()->query('_gl');
@@ -73,9 +76,11 @@ class CartDrawer extends Component
         } catch (MissingCredentialsException|CartExpiredException|ShopifyException $exception) {
             $this->error = $exception->getMessage();
         }
+
+        return null;
     }
 
-    public function render(CartService $cart)
+    public function render(CartService $cart): View
     {
         return view('livewire.shop.cart-drawer', [
             'cart' => $this->safeCart($cart),

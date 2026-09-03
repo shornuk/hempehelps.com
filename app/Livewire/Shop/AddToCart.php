@@ -6,6 +6,7 @@ use App\Cart\CartService;
 use App\Shopify\Exceptions\CartExpiredException;
 use App\Shopify\Exceptions\MissingCredentialsException;
 use App\Shopify\Exceptions\ShopifyException;
+use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
 class AddToCart extends Component
@@ -39,7 +40,7 @@ class AddToCart extends Component
         }
     }
 
-    public function render()
+    public function render(): View
     {
         return view('livewire.shop.add-to-cart');
     }

@@ -15,7 +15,7 @@ class ShopifyProductFactory extends Factory
 
     public function definition(): array
     {
-        $title = fake()->unique()->words(3, true);
+        $title = fake()->unique()->sentence(3);
 
         return [
             'shopify_id' => 'gid://shopify/Product/'.fake()->unique()->numerify('########'),

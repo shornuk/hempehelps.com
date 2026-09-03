@@ -4,8 +4,11 @@ namespace App\Livewire\Shop;
 
 use App\Markets\GeoSuggester;
 use App\Markets\MarketContext;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Cookie;
 use Livewire\Component;
+use Livewire\Features\SupportRedirects\Redirector;
 
 class MarketBanner extends Component
 {
@@ -39,7 +42,7 @@ class MarketBanner extends Component
         $this->show = false;
     }
 
-    public function switchMarket()
+    public function switchMarket(): Redirector|RedirectResponse
     {
         Cookie::queue(
             config('markets.cookie'),
@@ -50,7 +53,7 @@ class MarketBanner extends Component
         return redirect()->to($this->suggestedUrl);
     }
 
-    public function render()
+    public function render(): View
     {
         return view('livewire.shop.market-banner');
     }

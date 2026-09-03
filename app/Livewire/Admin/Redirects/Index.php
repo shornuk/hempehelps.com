@@ -4,6 +4,7 @@ namespace App\Livewire\Admin\Redirects;
 
 use App\Seo\Jobs\SyncShopifyRedirectsJob;
 use App\Seo\Models\Redirect;
+use Illuminate\Contracts\View\View;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -41,7 +42,7 @@ class Index extends Component
         SyncShopifyRedirectsJob::dispatch();
     }
 
-    public function render()
+    public function render(): View
     {
         return view('livewire.admin.redirects.index', [
             'redirects' => Redirect::query()->latest()->limit(200)->get(),

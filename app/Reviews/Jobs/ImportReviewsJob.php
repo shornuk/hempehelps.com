@@ -101,7 +101,7 @@ class ImportReviewsJob implements ShouldQueue
                 continue;
             }
 
-            $rows[] = array_combine($header, str_getcsv($line)) ?: [];
+            $rows[] = array_combine($header, str_getcsv($line));
         }
 
         return $rows;

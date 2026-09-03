@@ -23,17 +23,15 @@ class ReviewSummary extends Model
 
     public static function refreshFor(int $productId): void
     {
-        $stats = Review::query()
+        $query = Review::query()
             ->where('shopify_product_id', $productId)
-            ->where('status', ReviewStatus::Published)
-            ->selectRaw('AVG(rating) as average_rating, COUNT(*) as review_count')
-            ->first();
+            ->where('status', ReviewStatus::Published);
 
         static::query()->updateOrCreate(
             ['shopify_product_id' => $productId],
             [
-                'average_rating' => round((float) ($stats?->average_rating ?? 0), 2),
-                'review_count' => (int) ($stats?->review_count ?? 0),
+                'average_rating' => round((float) $query->avg('rating'), 2),
+                'review_count' => $query->count(),
             ],
         );
     }

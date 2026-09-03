@@ -65,7 +65,7 @@ class ProductMapper
             selectedVariant: $selected,
             variants: $variants,
             images: $images,
-            tags: array_map(strval(...), $node['tags'] ?? []),
+            tags: array_values(array_map(strval(...), $node['tags'] ?? [])),
             featuredImage: Image::fromShopify($node['featuredImage'] ?? null),
             vendor: (string) ($node['vendor'] ?? ''),
             productType: (string) ($node['productType'] ?? ''),

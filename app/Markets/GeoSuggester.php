@@ -9,7 +9,7 @@ class GeoSuggester
 {
     public function detectedCountry(Request $request): ?string
     {
-        $override = $request->header('X-Test-Country') ?: env('GEOIP_COUNTRY');
+        $override = $request->header('X-Test-Country') ?: config('markets.geoip_country');
 
         if (is_string($override) && $override !== '') {
             return strtoupper($override);

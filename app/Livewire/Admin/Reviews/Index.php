@@ -4,6 +4,7 @@ namespace App\Livewire\Admin\Reviews;
 
 use App\Enums\ReviewStatus;
 use App\Reviews\Models\Review;
+use Illuminate\Contracts\View\View;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -31,7 +32,7 @@ class Index extends Component
         Review::query()->findOrFail($id)->delete();
     }
 
-    public function render()
+    public function render(): View
     {
         $reviews = Review::query()
             ->with('product')

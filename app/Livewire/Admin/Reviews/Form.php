@@ -6,6 +6,7 @@ use App\Catalog\Models\ShopifyProduct;
 use App\Enums\ReviewSource;
 use App\Enums\ReviewStatus;
 use App\Reviews\Models\Review;
+use Illuminate\Contracts\View\View;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -47,7 +48,7 @@ class Form extends Component
             $this->body = $this->review->body;
             $this->status = $this->review->status->value;
             $this->verified_purchase = $this->review->verified_purchase;
-            $this->productSearch = $this->review->product?->title ?? '';
+            $this->productSearch = $this->review->product->title;
         }
     }
 
@@ -73,7 +74,7 @@ class Form extends Component
 
         $payload = [
             ...$data,
-            'source' => $this->review?->source ?? ReviewSource::Admin,
+            'source' => $this->review instanceof Review ? $this->review->source : ReviewSource::Admin,
             'published_at' => $data['status'] === ReviewStatus::Published->value ? now() : $this->review?->published_at,
         ];
 
@@ -86,7 +87,7 @@ class Form extends Component
         $this->redirect(route('admin.reviews.index'), navigate: true);
     }
 
-    public function render()
+    public function render(): View
     {
         $matches = [];
 

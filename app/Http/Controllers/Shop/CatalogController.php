@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Shop;
 
+use App\Catalog\DTOs\Collection;
+use App\Catalog\DTOs\Product;
 use App\Catalog\Models\ShopifyCollection;
 use App\Catalog\Models\ShopifyProduct;
 use App\Catalog\ProductRepository;
@@ -26,7 +28,7 @@ class CatalogController extends Controller
     {
         $collection = $products->getCollectionByHandle($handle);
 
-        abort_unless($collection, 404);
+        abort_unless($collection instanceof Collection, 404);
 
         return view('shop.catalog', [
             'products' => $collection->products,
@@ -39,7 +41,7 @@ class CatalogController extends Controller
     {
         $product = $products->getProductByHandle($handle);
 
-        abort_unless($product, 404);
+        abort_unless($product instanceof Product, 404);
 
         $local = ShopifyProduct::query()->where('handle', $handle)->first();
 

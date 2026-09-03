@@ -4,6 +4,7 @@ return [
     'default' => 'gb',
     'cookie' => 'market_choice',
     'cookie_minutes' => 60 * 24 * 30,
+    'geoip_country' => env('GEOIP_COUNTRY'),
     'hosts' => [
         'hempehelps.com' => 'gb',
         'www.hempehelps.com' => 'gb',

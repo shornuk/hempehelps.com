@@ -3,6 +3,7 @@
 namespace App\Livewire\Auth;
 
 use App\Auth\Actions\SendMagicLink;
+use Illuminate\Contracts\View\View;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -21,7 +22,7 @@ class OtpLogin extends Component
         $this->sent = true;
     }
 
-    public function render()
+    public function render(): View
     {
         return view('livewire.auth.otp-login')
             ->layout('components.layouts.storefront', [

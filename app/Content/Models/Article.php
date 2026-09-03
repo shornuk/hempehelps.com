@@ -8,7 +8,11 @@ use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
 
+/**
+ * @property Carbon|null $published_at
+ */
 #[Fillable(['slug', 'title', 'excerpt', 'body', 'meta_title', 'meta_description', 'market_id', 'published_at'])]
 class Article extends Model
 {

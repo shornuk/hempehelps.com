@@ -15,7 +15,7 @@ class ShopifyCollectionFactory extends Factory
 
     public function definition(): array
     {
-        $title = fake()->unique()->words(2, true);
+        $title = fake()->unique()->sentence(2);
 
         return [
             'shopify_id' => 'gid://shopify/Collection/'.fake()->unique()->numerify('########'),

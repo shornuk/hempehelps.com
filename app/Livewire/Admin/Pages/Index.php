@@ -5,6 +5,7 @@ namespace App\Livewire\Admin\Pages;
 use App\Content\Models\Article;
 use App\Content\Models\Faq;
 use App\Content\Models\Page;
+use Illuminate\Contracts\View\View;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -49,7 +50,7 @@ class Index extends Component
         $this->reset(['title', 'slug', 'body']);
     }
 
-    public function render()
+    public function render(): View
     {
         return view('livewire.admin.pages.index', [
             'pages' => Page::query()->latest()->limit(50)->get(),

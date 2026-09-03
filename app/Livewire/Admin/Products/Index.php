@@ -5,6 +5,7 @@ namespace App\Livewire\Admin\Products;
 use App\Catalog\Jobs\SyncCatalogJob;
 use App\Catalog\Models\ProductContent;
 use App\Catalog\Models\ShopifyProduct;
+use Illuminate\Contracts\View\View;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -29,10 +30,12 @@ class Index extends Component
     public function edit(int $id): void
     {
         $product = ShopifyProduct::query()->with('content')->findOrFail($id);
+        $content = $product->content;
         $this->editing = $id;
-        $this->meta_title = (string) $product->content?->meta_title;
-        $this->meta_description = (string) $product->content?->meta_description;
-        $this->blocks = json_encode($product->content?->blocks ?? [], JSON_PRETTY_PRINT);
+        $this->meta_title = $content === null ? '' : (string) $content->meta_title;
+        $this->meta_description = $content === null ? '' : (string) $content->meta_description;
+        $encoded = json_encode($content === null ? [] : ($content->blocks ?? []), JSON_PRETTY_PRINT);
+        $this->blocks = is_string($encoded) ? $encoded : '[]';
     }
 
     public function save(): void
@@ -63,7 +66,7 @@ class Index extends Component
         SyncCatalogJob::dispatch();
     }
 
-    public function render()
+    public function render(): View
     {
         $products = ShopifyProduct::query()
             ->with('content')

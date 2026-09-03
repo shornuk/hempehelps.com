@@ -14,6 +14,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * @property ReviewStatus $status
+ * @property ReviewSource $source
+ * @property-read ShopifyProduct|null $product
+ */
 #[Fillable([
     'shopify_product_id',
     'shopify_variant_id',

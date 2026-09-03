@@ -6,6 +6,7 @@ use App\Catalog\Models\ShopifyProduct;
 use App\Content\Models\Page;
 use App\Reviews\Models\Review;
 use App\Seo\Models\Redirect;
+use Illuminate\Contracts\View\View;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -14,7 +15,7 @@ use Livewire\Component;
 #[Title('Staff admin')]
 class Dashboard extends Component
 {
-    public function render()
+    public function render(): View
     {
         return view('livewire.admin.dashboard', [
             'products' => ShopifyProduct::query()->count(),

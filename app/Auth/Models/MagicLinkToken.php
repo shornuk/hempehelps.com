@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 
+/**
+ * @property Carbon $expires_at
+ * @property Carbon|null $used_at
+ */
 #[Fillable(['email', 'token', 'expires_at', 'used_at', 'ip_address'])]
 class MagicLinkToken extends Model
 {

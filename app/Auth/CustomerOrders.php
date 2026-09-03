@@ -65,6 +65,6 @@ class CustomerOrders
 
         $orders = $data['customers']['nodes'][0]['orders']['nodes'] ?? [];
 
-        return is_array($orders) ? $orders : [];
+        return array_values(is_array($orders) ? $orders : []);
     }
 }
