@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "parent": "product.json",
   "context": {
@@ -9,13 +18,9 @@
       "blocks": {
         "icon_with_text_4cmmQi": {
           "settings": {
-            "image_3": "shopify:\/\/shop_images\/Hempe_icons_01_Sulphate_Free_18d08408-e285-4589-a1eb-a54eb98d1b47.png",
+            "image_3": "shopify://shop_images/Hempe_icons_01_Sulphate_Free_18d08408-e285-4589-a1eb-a54eb98d1b47.png",
             "heading_3": ""
           }
-        },
-        "collapsible_tab_4ADUFf": {
-          "disabled": true,
-          "settings": {}
         },
         "complementary_9GgMTa": {
           "disabled": true,

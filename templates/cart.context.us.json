@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "parent": "cart.json",
   "context": {
@@ -21,7 +30,7 @@
           "type": "text",
           "disabled": false,
           "settings": {
-            "text": "<p>We process all orders in GBP. While the content of your cart is currently displayed in USD, you will checkout using GBP at the most current exchange rate.<\/p>"
+            "text": "<p>We process all orders in GBP. While the content of your cart is currently displayed in USD, you will checkout using GBP at the most current exchange rate.</p>"
           }
         }
       },

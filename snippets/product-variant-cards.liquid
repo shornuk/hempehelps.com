@@ -12,7 +12,22 @@
 
   Usage:
   {% render 'product-variant-cards', product: product, option: option, product_form_id: product_form_id %}
+
+  Subscriptions: in the GB market, on products tagged "subscription", any
+  variant with a custom.subscription_url metafield gets a One-time /
+  Subscribe panel (see assets/purchase-options.js).
 {% endcomment %}
+
+{%- liquid
+  assign subscriptions_enabled = false
+  if localization.market.handle == 'gb' and product.tags contains 'subscription'
+    assign subscriptions_enabled = true
+  endif
+-%}
+
+{%- if subscriptions_enabled -%}
+  <script src="{{ 'purchase-options.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 
 <fieldset class="js product-form__input product-form__input--cards">
   <legend class="form__label visually-hidden">{{ option.name }}</legend>
@@ -38,7 +53,14 @@
       endif
 
       assign badge = card_variant.metafields.custom.badge | strip
+
+      assign subscription_url = blank
+      if subscriptions_enabled
+        assign subscription_url = card_variant.metafields.custom.subscription_url.value
+      endif
     -%}
+
+    <div class="variant-card-group{% if subscription_url != blank %} variant-card-group--has-plans{% endif %}">
 
     {%- capture input_id -%}
       {{ section.id }}-{{ option.position }}-{{ forloop.index0 -}}
@@ -86,7 +108,7 @@
           <span class="variant-card__unit-price">
             {{ card_variant.unit_price | money }}
             <span aria-hidden="true">/</span>
-            <span class="visually-hidden">{{ 'products.product.unit_price_separator' | t }}&nbsp;</span>
+            <span class="visually-hidden">{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
             {%- if card_variant.unit_price_measurement.reference_value != 1 -%}
               {{- card_variant.unit_price_measurement.reference_value -}}
             {%- endif -%}
@@ -99,5 +121,92 @@
         {{- 'products.product.variant_sold_out_or_unavailable' | t -}}
       </span>
     </label>
+
+    {%- if subscription_url != blank -%}
+      {%- liquid
+        assign discount = card_variant.metafields.custom.subscription_discount.value | default: 10
+        assign sub_multiplier = 100 | minus: discount
+        assign sub_price = card_variant.price | times: sub_multiplier | divided_by: 100
+
+        assign sub_unit_price = blank
+        if card_variant.unit_price_measurement
+          assign unit_ref = card_variant.unit_price_measurement.reference_value
+          assign unit_qty = card_variant.unit_price_measurement.quantity_value
+          assign sub_unit_price = sub_price | times: 1.0 | times: unit_ref | divided_by: unit_qty | round
+        endif
+
+        assign plan_name = 'purchase_type-' | append: section.id | append: '-' | append: card_variant.id
+      -%}
+      <purchase-options
+        class="variant-card__plans no-js-hidden"
+        data-section="{{ section.id }}"
+        data-variant-id="{{ card_variant.id }}"
+        data-url="{{ subscription_url | escape }}"
+        data-cta-label="Subscribe – {{ sub_price | money | strip_html | escape }} every 4 weeks"
+      >
+        <input
+          type="radio"
+          id="{{ input_id }}-onetime"
+          class="purchase-option__radio"
+          name="{{ plan_name }}"
+          value="onetime"
+          data-purchase-option
+          checked
+        >
+        <label for="{{ input_id }}-onetime" class="purchase-option">
+          <span class="purchase-option__dot" aria-hidden="true"></span>
+          <span class="purchase-option__body">
+            <span class="purchase-option__title">One-time purchase</span>
+          </span>
+          <span class="purchase-option__pricing">
+            <span class="purchase-option__price">{{ card_variant.price | money }}</span>
+          </span>
+        </label>
+
+        <input
+          type="radio"
+          id="{{ input_id }}-subscribe"
+          class="purchase-option__radio"
+          name="{{ plan_name }}"
+          value="subscribe"
+          data-purchase-option
+        >
+        <label for="{{ input_id }}-subscribe" class="purchase-option purchase-option--subscribe">
+          <span class="purchase-option__dot" aria-hidden="true"></span>
+          <span class="purchase-option__body">
+            <span class="purchase-option__title">Subscribe &amp; save {{ discount }}%</span>
+            <span class="purchase-option__note">Delivered every 4 weeks · switch to 6 or 8 at checkout</span>
+            <span class="purchase-option__note">Change or cancel anytime from your account</span>
+          </span>
+          <span class="purchase-option__pricing">
+            <span class="purchase-option__price">{{ sub_price | money }}</span>
+            {%- if sub_unit_price != blank -%}
+              <span class="variant-card__unit-price">
+                {{ sub_unit_price | money }}
+                <span aria-hidden="true">/</span>
+                <span class="visually-hidden">{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
+                {%- if card_variant.unit_price_measurement.reference_value != 1 -%}
+                  {{- card_variant.unit_price_measurement.reference_value -}}
+                {%- endif -%}
+                {{ card_variant.unit_price_measurement.reference_unit }}
+              </span>
+            {%- endif -%}
+          </span>
+        </label>
+
+        <template data-subscription-price>
+          <div class="price price--large price--subscription">
+            <div class="price__container">
+              <span class="visually-hidden visually-hidden--inline">Subscription price</span>
+              <span class="price-item price-item--sale">{{ sub_price | money }}</span>
+              <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+              <s class="price-item price-item--regular">{{ card_variant.price | money }}</s>
+              <span class="price__cadence">every 4 weeks</span>
+            </div>
+          </div>
+        </template>
+      </purchase-options>
+    {%- endif -%}
+    </div>
   {%- endfor -%}
 </fieldset>

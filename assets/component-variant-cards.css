@@ -168,7 +168,216 @@
   }
 }
 
+/* Subscription plans — rendered inside the selected card for subscribable
+   variants (see snippets/product-variant-cards.liquid) */
+.variant-card__plans {
+  display: none;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem 1rem 1.2rem;
+  background-color: rgba(var(--color-foreground), 0.03);
+  border-top: 1px solid var(--variant-card-border);
+}
+
+.variant-card__radio:checked + .variant-card + .variant-card__plans {
+  display: flex;
+}
+
+.variant-card-group--has-plans:has(.variant-card__radio:checked) {
+  border: 1px solid var(--variant-card-selected);
+  box-shadow: 0 0 0 1px var(--variant-card-selected);
+  border-radius: 1.4rem;
+  overflow: hidden;
+}
+
+.variant-card-group--has-plans .variant-card__radio:checked + .variant-card {
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.purchase-option__radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.purchase-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.2rem 1.2rem;
+  background-color: rgb(var(--color-background));
+  border: 1px solid var(--variant-card-border);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.purchase-option:hover {
+  border-color: rgba(var(--color-foreground), 0.3);
+}
+
+.purchase-option__radio:checked + .purchase-option {
+  border-color: var(--variant-card-selected);
+}
+
+.purchase-option__radio:focus-visible + .purchase-option {
+  outline: 0.2rem solid var(--variant-card-selected);
+  outline-offset: 0.2rem;
+}
+
+.purchase-option__dot {
+  flex-shrink: 0;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.1rem;
+  border: 2px solid var(--variant-card-selected);
+  border-radius: 50%;
+}
+
+.purchase-option__radio:checked + .purchase-option .purchase-option__dot::after {
+  content: '';
+  position: absolute;
+  inset: 0.3rem;
+  border-radius: 50%;
+  background-color: var(--variant-card-selected);
+}
+
+.purchase-option__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
+.purchase-option__title {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: rgb(var(--color-foreground));
+}
+
+.purchase-option--subscribe .purchase-option__title {
+  font-weight: 700;
+}
+
+.purchase-option__note {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.purchase-option__pricing {
+  margin-left: auto;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.purchase-option__price {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: rgb(var(--color-foreground));
+}
+
+.purchase-option--subscribe .purchase-option__price {
+  font-weight: 700;
+}
+
+/* Header price while Subscribe is selected */
+.price--subscription .price__container {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+}
+
+.price--subscription .price-item--sale {
+  margin-right: 0;
+}
+
+.price--subscription .price-item--regular,
+.price__cadence {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.price--subscription .price-item--regular {
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+.price__cadence {
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+/* Subscription CTA — swapped in for the buy buttons (snippets/buy-buttons.liquid) */
+.subscription-cta {
+  width: 100%;
+}
+
+.subscription-cta__button.button {
+  gap: 0.8rem;
+  padding: 0 1.6rem;
+  letter-spacing: 0;
+  text-align: center;
+  background-color: #066f43;
+  border-color: #066f43;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.subscription-cta__button.button:hover {
+  background-color: #066f43;
+}
+
+.subscription-cta__button.button::after {
+  box-shadow: none;
+}
+
+.subscription-cta__button .icon-arrow {
+  flex-shrink: 0;
+  width: 1.4rem;
+  height: auto;
+}
+
+.subscription-cta__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin: 1rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.subscription-cta__note .icon-padlock {
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: auto;
+  margin-top: 0.2rem;
+}
+
+@media screen and (max-width: 479px) {
+  .purchase-option {
+    padding: 1.1rem 1rem;
+    gap: 1rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .purchase-option {
+    transition: none;
+  }
+
   .variant-card {
     transition: none;
   }

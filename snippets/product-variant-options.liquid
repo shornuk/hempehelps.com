@@ -71,11 +71,12 @@
     {% if option.selected_value == value %}
       {% assign checked = true %}
     {% endif %}
+    {% assign swatch_value = value | escape %}
     {%
       render 'swatch-input',
       id: input_id,
       name: option.name,
-      value: value | escape,
+      value: swatch_value,
       product_form_id: product_form_id,
       checked: checked,
       disabled: option_disabled,

@@ -979,7 +979,8 @@ class VariantSelects extends HTMLElement {
         return element.value;
       }
       if (element.tagName === 'FIELDSET') {
-        return Array.from(element.querySelectorAll('input')).find((radio) => radio.checked)?.value;
+        return Array.from(element.querySelectorAll('input:not([data-purchase-option])')).find((radio) => radio.checked)
+          ?.value;
       }
     });
   }
@@ -1053,13 +1054,13 @@ class VariantSelects extends HTMLElement {
 
   updateVariantStatuses() {
     const selectedOptionOneVariants = this.variantData.filter(
-      (variant) => this.querySelector(':checked').value === variant.option1
+      (variant) => this.querySelector(':checked:not([data-purchase-option])').value === variant.option1
     );
     const inputWrappers = [...this.querySelectorAll('.product-form__input')];
     inputWrappers.forEach((option, index) => {
       if (index === 0) return;
       const optionInputs = [...option.querySelectorAll('input[type="radio"], option')];
-      const previousOptionSelected = inputWrappers[index - 1].querySelector(':checked').value;
+      const previousOptionSelected = inputWrappers[index - 1].querySelector(':checked:not([data-purchase-option])').value;
       const availableOptionInputsValue = selectedOptionOneVariants
         .filter((variant) => variant.available && variant[`option${index}`] === previousOptionSelected)
         .map((variantOption) => variantOption[`option${index + 1}`]);

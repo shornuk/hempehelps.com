@@ -238,6 +238,19 @@
 	  				          {{ form | payment_button }}
 	  				        {%- endif -%}
 	  				      </div>
+
+	  				      {%- if localization.market.handle == 'gb' and product.tags contains 'subscription' -%}
+	  				        <div id="SubscriptionCta-{{ section_id }}" class="subscription-cta hidden">
+	  				          <a href="#" class="subscription-cta__button button button--primary button--full-width">
+	  				            <span class="subscription-cta__label">Subscribe</span>
+	  				            {% render 'icon-arrow' %}
+	  				          </a>
+	  				          <p class="subscription-cta__note">
+	  				            {% render 'icon-padlock' %}
+	  				            <span>You'll set up your subscription on our secure subscriptions checkout. Subscriptions can't be combined with items in your cart.</span>
+	  				          </p>
+	  				        </div>
+	  				      {%- endif -%}
 	  				    {%- endform -%}
 	  				  </product-form>
 	  				{%- else -%}
