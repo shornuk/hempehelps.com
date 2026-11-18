@@ -1,0 +1,204 @@
+{%- liquid
+  assign show_section = true
+  if section.settings.uk_only and localization.market.handle != 'gb'
+    assign show_section = false
+  endif
+-%}
+
+{%- if show_section or request.design_mode -%}
+  {{ 'section-subscribe.css' | asset_url | stylesheet_tag }}
+
+  {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+  {%- liquid
+    assign promo_image = section.settings.image
+    if promo_image == blank
+      assign promo_image = images['HEMPE_Hot_and_Ice_Muscle_Gels.png']
+    endif
+  -%}
+
+  <div class="subscribe subscribe-promo subscribe-promo--image-{{ section.settings.image_position }} color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+    <div class="page-width">
+      <div class="subscribe-promo__grid">
+        <div class="subscribe-promo__media">
+          {%- if promo_image != blank -%}
+            {{
+              promo_image
+              | image_url: width: 1200
+              | image_tag:
+                widths: '450, 600, 900, 1200',
+                sizes: '(min-width: 990px) 50vw, 100vw',
+                loading: 'lazy'
+            }}
+          {%- else -%}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+
+        <div class="subscribe-promo__content">
+          {%- if section.settings.eyebrow != blank -%}
+            <p class="subscribe-promo__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+          {%- endif -%}
+          {%- if section.settings.heading != blank -%}
+            <h2 class="subscribe-promo__heading">{{ section.settings.heading | escape }}</h2>
+          {%- endif -%}
+
+          {%- if section.blocks.size > 0 -%}
+            <ul class="subscribe-promo__points">
+              {%- for block in section.blocks -%}
+                <li class="subscribe-promo__point" {{ block.shopify_attributes }}>
+                  {%- render 'subscribe-icon', icon: 'check' -%}
+                  {{ block.settings.text | escape }}
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+          {%- if section.settings.button_label != blank -%}
+            <a
+              href="{{ section.settings.button_link | default: '/pages/subscribe-and-save' }}"
+              class="subscribe__btn subscribe__btn--primary"
+            >
+              {{- section.settings.button_label | escape -}}
+            </a>
+          {%- endif -%}
+
+          {%- if request.design_mode and show_section == false -%}
+            <p class="subscribe-promo__note">Hidden for visitors outside the UK market.</p>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Subscribe: promo",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Defaults to HEMPE_Hot_and_Ice_Muscle_Gels.png from Files"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position (desktop)",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Subscribe & save"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "10% off subscriptions"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Subscribe now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "info": "Defaults to /pages/subscribe-and-save"
+    },
+    {
+      "type": "checkbox",
+      "id": "uk_only",
+      "label": "Only show in the UK market",
+      "info": "Subscriptions are UK-only",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "point",
+      "name": "Point",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Cancel anytime"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Subscribe: promo",
+      "settings": {
+        "color_scheme": "scheme-d8b74ac0-1607-4212-8b75-fa581019b8ae"
+      },
+      "blocks": [
+        { "type": "point", "settings": { "text": "Choose every 4, 6 or 8 weeks" } },
+        { "type": "point", "settings": { "text": "Ice or Hot, 50ml or 150ml" } },
+        { "type": "point", "settings": { "text": "Free UK delivery" } },
+        { "type": "point", "settings": { "text": "Pause, skip or cancel anytime" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -738,6 +738,107 @@
   }
 }
 
+/* Promo */
+.subscribe-promo__grid {
+  display: grid;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.subscribe-promo__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--subscribe-radius-lg);
+  background: rgba(var(--color-foreground), 0.06);
+}
+
+.subscribe-promo__media img,
+.subscribe-promo__media .placeholder-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.subscribe-promo__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.subscribe-promo__eyebrow {
+  margin: 0;
+  color: var(--subscribe-green);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.subscribe-promo__heading {
+  margin: -0.8rem 0 0.8rem;
+  font-size: calc(var(--font-heading-scale) * 3.2rem);
+  line-height: 1.1;
+}
+
+.subscribe-promo__points {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0 0 1.2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.subscribe-promo__point {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 2rem 0.9rem 1.4rem;
+  border-radius: 999px;
+  background: var(--subscribe-card-bg);
+  box-shadow: 0 0 0 1px var(--subscribe-border);
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.subscribe-promo__point .subscribe__icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.subscribe-promo__note {
+  margin: 0;
+  color: var(--subscribe-muted);
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+@media screen and (min-width: 750px) {
+  .subscribe-promo__heading {
+    font-size: calc(var(--font-heading-scale) * 4.4rem);
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .subscribe-promo__grid {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 5.6rem;
+  }
+
+  .subscribe-promo--image-right .subscribe-promo__grid {
+    grid-template-columns: 1fr 1.1fr;
+  }
+
+  .subscribe-promo--image-right .subscribe-promo__media {
+    order: 2;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .subscribe__btn,
   .subscribe-faq__plus,
