@@ -1,0 +1,379 @@
+{% comment %}
+  Subscriber price cards for the Ice and Hot gels.
+
+  Prices, discount, badge and checkout link come from the same variant
+  metafields as snippets/product-variant-cards.liquid (custom.subscription_url,
+  custom.subscription_discount, custom.badge). Subscriptions are GB-only, and
+  products must be tagged "subscription"; other markets get a fallback message.
+{% endcomment %}
+
+{{ 'section-subscribe.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign subscriptions_enabled = false
+  if localization.market.handle == 'gb'
+    assign subscriptions_enabled = true
+  endif
+
+  assign gels = 'ice,hot' | split: ','
+  assign available_gels = ''
+  for gel in gels
+    assign product_key = gel | append: '_product'
+    assign gel_product = section.settings[product_key]
+    if gel_product != blank and gel_product.tags contains 'subscription'
+      for v in gel_product.variants
+        if v.metafields.custom.subscription_url.value != blank
+          assign available_gels = available_gels | append: gel | append: ','
+          break
+        endif
+      endfor
+    endif
+  endfor
+  assign available_gels = available_gels | split: ','
+
+  assign selected_gel = section.settings.default_gel
+  unless available_gels contains selected_gel
+    assign selected_gel = available_gels | first
+  endunless
+-%}
+
+<div
+  {% if section.settings.anchor_id != blank %}
+    id="{{ section.settings.anchor_id | handle }}"
+  {% endif %}
+  class="subscribe subscribe-pricing color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
+>
+  <div class="page-width">
+    <div class="subscribe__header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="subscribe__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="subscribe__heading">{{ section.settings.heading | escape }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subheading != blank -%}
+        <div class="subscribe__subheading">{{ section.settings.subheading }}</div>
+      {%- endif -%}
+
+      {%- if subscriptions_enabled and available_gels.size > 1 -%}
+        <div class="subscribe-pricing__toggle" role="radiogroup" aria-label="{{ section.settings.toggle_label | escape }}">
+          {%- for gel in available_gels -%}
+            {%- liquid
+              assign label_key = gel | append: '_label'
+              assign radio_id = 'SubscribeGel-' | append: section.id | append: '-' | append: gel
+              if gel == 'ice'
+                assign gel_icon = 'snow'
+              else
+                assign gel_icon = 'flame'
+              endif
+            -%}
+            <input
+              type="radio"
+              id="{{ radio_id }}"
+              class="subscribe-pricing__radio"
+              name="SubscribeGel-{{ section.id }}"
+              value="{{ gel }}"
+              {% if gel == selected_gel %}
+                checked
+              {% endif %}
+            >
+            <label for="{{ radio_id }}" class="subscribe-pricing__option">
+              {%- render 'subscribe-icon', icon: gel_icon -%}
+              {{ section.settings[label_key] | escape }}
+            </label>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- if subscriptions_enabled -%}
+      {%- for gel in available_gels -%}
+        {%- liquid
+          assign product_key = gel | append: '_product'
+          assign desc_key = gel | append: '_desc'
+          assign gel_product = section.settings[product_key]
+        -%}
+        <div class="subscribe-pricing__panel" data-gel="{{ gel }}">
+          <div class="subscribe-pricing__cards">
+            {%- for card_variant in gel_product.variants -%}
+              {%- liquid
+                assign subscription_url = card_variant.metafields.custom.subscription_url.value
+                if subscription_url == blank
+                  continue
+                endif
+
+                assign discount = card_variant.metafields.custom.subscription_discount.value | default: 10
+                assign sub_multiplier = 100 | minus: discount
+                assign sub_price = card_variant.price | times: sub_multiplier | divided_by: 100
+
+                assign sub_unit_price = blank
+                if card_variant.unit_price_measurement
+                  assign unit_ref = card_variant.unit_price_measurement.reference_value
+                  assign unit_qty = card_variant.unit_price_measurement.quantity_value
+                  assign sub_unit_price = sub_price | times: 1.0 | times: unit_ref | divided_by: unit_qty | round
+                endif
+
+                assign badge = card_variant.metafields.custom.badge | strip
+                assign card_image = card_variant.featured_image | default: gel_product.featured_image
+
+                if card_variant.title == 'Default Title'
+                  assign size_label = gel_product.title
+                else
+                  assign size_label = card_variant.title
+                endif
+              -%}
+              <div class="subscribe-pricing__card{% if badge != blank %} subscribe-pricing__card--featured{% endif %}">
+                {%- if badge != blank -%}
+                  <p class="subscribe__pill subscribe-pricing__badge">{{ badge | escape }}</p>
+                {%- endif -%}
+
+                {%- if card_image -%}
+                  <div class="subscribe-pricing__media">
+                    {{
+                      card_image
+                      | image_url: width: 400
+                      | image_tag:
+                        widths: '200, 300, 400',
+                        sizes: '140px',
+                        loading: 'lazy',
+                        alt: card_image.alt
+                    }}
+                  </div>
+                {%- endif -%}
+
+                <div class="subscribe-pricing__details">
+                  <p class="subscribe-pricing__product">{{ gel_product.title | escape }}</p>
+                  <h3 class="subscribe-pricing__size">{{ size_label | escape }}</h3>
+                  {%- if section.settings[desc_key] != blank -%}
+                    <p class="subscribe-pricing__desc">{{ section.settings[desc_key] | escape }}</p>
+                  {%- endif -%}
+
+                  <div class="subscribe-pricing__prices">
+                    <span class="subscribe-pricing__price">
+                      <span class="visually-hidden">Subscription price</span>
+                      {{ sub_price | money }}
+                    </span>
+                    <s class="subscribe-pricing__compare">
+                      <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
+                      {{ card_variant.price | money }}
+                    </s>
+                    <span class="subscribe__pill">Save {{ discount }}%</span>
+                  </div>
+
+                  {%- if sub_unit_price != blank -%}
+                    <p class="subscribe-pricing__unit">
+                      {{ sub_unit_price | money }}
+                      <span aria-hidden="true">/</span>
+                      <span class="visually-hidden">{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
+                      {%- if card_variant.unit_price_measurement.reference_value != 1 -%}
+                        {{- card_variant.unit_price_measurement.reference_value -}}
+                      {%- endif -%}
+                      {{ card_variant.unit_price_measurement.reference_unit }}
+                      · per delivery
+                    </p>
+                  {%- endif -%}
+
+                  <a href="{{ subscription_url | escape }}" class="subscribe__btn subscribe__btn--primary">
+                    {{ section.settings.cta_label | escape }} {{ size_label | escape }}
+                    {%- render 'subscribe-icon', icon: 'arrow' -%}
+                  </a>
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- else -%}
+        {%- if request.design_mode -%}
+          <p class="subscribe-pricing__fallback">
+            Select the Ice and Hot products in this section's settings. Products need the "subscription" tag and
+            variants need a subscription URL metafield to show here.
+          </p>
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if section.settings.footnote != blank and available_gels.size > 0 -%}
+        <div class="subscribe-pricing__footnote">{{ section.settings.footnote }}</div>
+      {%- endif -%}
+    {%- else -%}
+      <div class="subscribe-pricing__fallback">
+        {{ section.settings.fallback_text }}
+        <div class="subscribe__buttons">
+          {%- for gel in gels -%}
+            {%- assign product_key = gel | append: '_product' -%}
+            {%- assign gel_product = section.settings[product_key] -%}
+            {%- if gel_product != blank -%}
+              <a
+                href="{{ gel_product.url }}"
+                class="subscribe__btn subscribe__btn--{% if forloop.first %}primary{% else %}secondary{% endif %}"
+              >
+                {{- gel_product.title | escape -}}
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Subscribe: pricing",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Subscriber prices"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Choose your gel"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Available on HEMPE Ice and Hot Muscle & Joint Gel, in 50ml and 150ml.</p>"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "info": "Lets buttons link here, e.g. \"choose\" for #choose",
+      "default": "choose"
+    },
+    {
+      "type": "header",
+      "content": "Products",
+      "info": "Products must be tagged \"subscription\". Only variants with a subscription URL metafield are shown. Add a badge metafield to a variant to highlight it."
+    },
+    {
+      "type": "product",
+      "id": "ice_product",
+      "label": "Ice product"
+    },
+    {
+      "type": "text",
+      "id": "ice_label",
+      "label": "Ice toggle label",
+      "default": "Ice · cooling"
+    },
+    {
+      "type": "text",
+      "id": "ice_desc",
+      "label": "Ice description",
+      "default": "Natural cooling relief · delivered every 4, 6 or 8 weeks"
+    },
+    {
+      "type": "product",
+      "id": "hot_product",
+      "label": "Hot product"
+    },
+    {
+      "type": "text",
+      "id": "hot_label",
+      "label": "Hot toggle label",
+      "default": "Hot · warming"
+    },
+    {
+      "type": "text",
+      "id": "hot_desc",
+      "label": "Hot description",
+      "default": "Natural warming relief · delivered every 4, 6 or 8 weeks"
+    },
+    {
+      "type": "select",
+      "id": "default_gel",
+      "label": "Selected by default",
+      "options": [
+        { "value": "ice", "label": "Ice" },
+        { "value": "hot", "label": "Hot" }
+      ],
+      "default": "ice"
+    },
+    {
+      "type": "text",
+      "id": "toggle_label",
+      "label": "Toggle accessible label",
+      "default": "Choose gel type"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button label",
+      "info": "The variant size is added after this, e.g. \"Subscribe – 50ml\"",
+      "default": "Subscribe –"
+    },
+    {
+      "type": "richtext",
+      "id": "footnote",
+      "label": "Footnote",
+      "default": "<p>Subscription discount applies to single 50ml and 150ml Ice and Hot gels. Duos and gift sets are one-time purchase only.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "fallback_text",
+      "label": "Message outside the UK",
+      "info": "Subscriptions are UK-only. Visitors in other markets see this with links to the products.",
+      "default": "<p>Subscriptions are UK-only for now. You can still order our gels as a one-time purchase.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 88
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 88
+    }
+  ],
+  "presets": [
+    {
+      "name": "Subscribe: pricing"
+    }
+  ]
+}
+{% endschema %}

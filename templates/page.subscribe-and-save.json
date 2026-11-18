@@ -1,0 +1,295 @@
+{
+  "sections": {
+    "hero": {
+      "type": "subscribe-hero",
+      "blocks": {
+        "bullet_discount": {
+          "type": "bullet",
+          "settings": {
+            "text": "10% off every delivery"
+          }
+        },
+        "bullet_delivery": {
+          "type": "bullet",
+          "settings": {
+            "text": "Free UK delivery"
+          }
+        },
+        "bullet_cancel": {
+          "type": "bullet",
+          "settings": {
+            "text": "Cancel anytime"
+          }
+        }
+      },
+      "block_order": ["bullet_discount", "bullet_delivery", "bullet_cancel"],
+      "settings": {
+        "badge": "Subscribe & save 10%",
+        "heading": "Never run out\nof relief.",
+        "text": "<p>Get your HEMPE Ice or Hot Muscle & Joint Gel delivered every 4 weeks, with 10% off every order. Pause, skip, reschedule or cancel whenever you like – you're always in control.</p>",
+        "button_label_1": "Start a subscription",
+        "button_link_1": "#choose",
+        "button_label_2": "How it works",
+        "button_link_2": "#how",
+        "fallback_product": "ice-muscle-joint-gel",
+        "color_scheme": "scheme-d8b74ac0-1607-4212-8b75-fa581019b8ae",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "how_it_works": {
+      "type": "subscribe-cards",
+      "blocks": {
+        "step_1": {
+          "type": "card",
+          "settings": {
+            "icon": "check",
+            "title": "Choose your gel",
+            "text": "<p>Pick Ice or Hot, in 50ml or 150ml.</p>"
+          }
+        },
+        "step_2": {
+          "type": "card",
+          "settings": {
+            "icon": "check",
+            "title": "Select \"Subscribe & save\"",
+            "text": "<p>10% comes off straight away. Deliveries default to every 4 weeks – switch to 6 or 8 at checkout.</p>"
+          }
+        },
+        "step_3": {
+          "type": "card",
+          "settings": {
+            "icon": "check",
+            "title": "A fresh gel arrives",
+            "text": "<p>Each cycle you're billed automatically at the subscriber price and a new gel is sent out, free to your door.</p>"
+          }
+        },
+        "step_4": {
+          "type": "card",
+          "settings": {
+            "icon": "check",
+            "title": "Manage it your way",
+            "text": "<p><a href=\"https://subscribe.hempehelps.com/login\" title=\"https://subscribe.hempehelps.com/login\">Log in to your subscription account</a> any time to pause, skip, reschedule, change frequency or cancel.</p>"
+          }
+        }
+      },
+      "block_order": ["step_1", "step_2", "step_3", "step_4"],
+      "settings": {
+        "card_style": "numbered",
+        "eyebrow": "",
+        "heading": "Set it up once. We'll handle the rest.",
+        "subheading": "",
+        "anchor_id": "how",
+        "color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "benefits": {
+      "type": "subscribe-benefits",
+      "blocks": {
+        "benefit_save": {
+          "type": "benefit",
+          "settings": {
+            "icon": "tag",
+            "title": "Save 10% on every order",
+            "text": "<p>Not just the first one – every delivery, for as long as you subscribe.</p>"
+          }
+        },
+        "benefit_delivery": {
+          "type": "benefit",
+          "settings": {
+            "icon": "truck",
+            "title": "Free UK delivery",
+            "text": "<p>No extra fees. Your gel turns up before the last one runs dry.</p>"
+          }
+        },
+        "benefit_routine": {
+          "type": "benefit",
+          "settings": {
+            "icon": "calendar",
+            "title": "Delivery that fits your routine",
+            "text": "<p>Every 4, 6 or 8 weeks – whatever matches how often you use it.</p>"
+          }
+        },
+        "benefit_commitment": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shield",
+            "title": "No commitment",
+            "text": "<p>Cancel any time from your account. No phone calls, no hoops.</p>"
+          }
+        }
+      },
+      "block_order": ["benefit_save", "benefit_delivery", "benefit_routine", "benefit_commitment"],
+      "settings": {
+        "image": "shopify://shop_images/HEMPE_Hot_and_Ice_Muscle_Gels.png",
+        "image_position": "left",
+        "heading": "Why subscribe?",
+        "text": "<p>Relief works best when it's there when you need it. A HEMPE subscription keeps a fresh gel in your kit bag or bathroom cabinet, at a better price, with none of the admin.</p>",
+        "button_label": "Subscribe now",
+        "button_link": "#choose",
+        "color_scheme": "scheme-d8b74ac0-1607-4212-8b75-fa581019b8ae",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "controls": {
+      "type": "subscribe-cards",
+      "blocks": {
+        "control_pause": {
+          "type": "card",
+          "settings": {
+            "icon": "pause",
+            "title": "Pause",
+            "text": "<p>Got plenty left or heading away? Pause deliveries and pick back up when you're ready.</p>"
+          }
+        },
+        "control_skip": {
+          "type": "card",
+          "settings": {
+            "icon": "skip",
+            "title": "Skip",
+            "text": "<p>Skip a single delivery without changing anything else.</p>"
+          }
+        },
+        "control_reschedule": {
+          "type": "card",
+          "settings": {
+            "icon": "reschedule",
+            "title": "Reschedule",
+            "text": "<p>Move your next delivery to a date that suits you better.</p>"
+          }
+        },
+        "control_frequency": {
+          "type": "card",
+          "settings": {
+            "icon": "refresh",
+            "title": "Change frequency",
+            "text": "<p>Switch between every 4, 6 or 8 weeks as your needs change.</p>"
+          }
+        },
+        "control_cancel": {
+          "type": "card",
+          "settings": {
+            "icon": "cancel",
+            "title": "Cancel anytime",
+            "text": "<p>No minimum term. Cancel in a couple of clicks.</p>"
+          }
+        }
+      },
+      "block_order": ["control_pause", "control_skip", "control_reschedule", "control_frequency", "control_cancel"],
+      "settings": {
+        "card_style": "icon",
+        "eyebrow": "",
+        "heading": "Your subscription, your rules",
+        "subheading": "<p>Everything is managed from your subscription account – change it whenever life changes.</p>",
+        "anchor_id": "",
+        "color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "pricing": {
+      "type": "subscribe-pricing",
+      "settings": {
+        "eyebrow": "Subscriber prices",
+        "heading": "Choose your gel",
+        "subheading": "<p>Available on HEMPE Ice and Hot Muscle & Joint Gel, in 50ml and 150ml.</p>",
+        "anchor_id": "choose",
+        "ice_product": "ice-muscle-joint-gel",
+        "ice_label": "Ice · cooling",
+        "ice_desc": "Natural cooling relief · delivered every 4, 6 or 8 weeks",
+        "hot_product": "hot-muscle-joint-gel",
+        "hot_label": "Hot · warming",
+        "hot_desc": "Natural warming relief · delivered every 4, 6 or 8 weeks",
+        "default_gel": "ice",
+        "toggle_label": "Choose gel type",
+        "cta_label": "Subscribe –",
+        "footnote": "<p>Subscription discount applies to single 50ml and 150ml Ice and Hot gels. Duos and gift sets are one-time purchase only.</p>",
+        "fallback_text": "<p>Subscriptions are UK-only for now. You can still order our gels as a one-time purchase.</p>",
+        "color_scheme": "scheme-d8b74ac0-1607-4212-8b75-fa581019b8ae",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "faq": {
+      "type": "subscribe-faq",
+      "blocks": {
+        "faq_charged": {
+          "type": "question",
+          "settings": {
+            "question": "When will I be charged?",
+            "answer": "<p>You pay for your first gel at checkout. After that, you're billed automatically at the subscriber price each time a delivery is due – every 4 weeks by default, or every 6 or 8 if you've chosen that.</p>"
+          }
+        },
+        "faq_manage": {
+          "type": "question",
+          "settings": {
+            "question": "How do I pause, skip or reschedule?",
+            "answer": "<p><a href=\"https://subscribe.hempehelps.com/login\" title=\"https://subscribe.hempehelps.com/login\">Log in to your subscription account</a> – we'll email your login details when your first order is placed. From there you can pause, skip your next order, move it to a new date or change how often it arrives.</p>"
+          }
+        },
+        "faq_frequency": {
+          "type": "question",
+          "settings": {
+            "question": "Which frequency should I choose?",
+            "answer": "<p>Most people start with every 4 weeks. If gel starts piling up, switch to 6 or 8 weeks from your account – it takes seconds.</p>"
+          }
+        },
+        "faq_commitment": {
+          "type": "question",
+          "settings": {
+            "question": "Is there a minimum commitment?",
+            "answer": "<p>No. You can cancel at any time from your account, and you won't be charged again.</p>"
+          }
+        },
+        "faq_both": {
+          "type": "question",
+          "settings": {
+            "question": "Can I subscribe to both Ice and Hot?",
+            "answer": "<p>Yes – set up a subscription for each gel and you'll get 10% off both.</p>"
+          }
+        }
+      },
+      "block_order": ["faq_charged", "faq_manage", "faq_frequency", "faq_commitment", "faq_both"],
+      "settings": {
+        "heading": "Subscription FAQs",
+        "open_first": true,
+        "color_scheme": "scheme-db33b1ce-dbae-4802-b0e6-6cb6d3429eac",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "cta": {
+      "type": "subscribe-cta",
+      "blocks": {
+        "button_ice": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Ice Gel",
+            "link": "shopify://products/ice-muscle-joint-gel",
+            "style": "accent"
+          }
+        },
+        "button_hot": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Hot Gel",
+            "link": "shopify://products/hot-muscle-joint-gel",
+            "style": "secondary"
+          }
+        }
+      },
+      "block_order": ["button_ice", "button_hot"],
+      "settings": {
+        "heading": "Relief on repeat. 10% off, every time.",
+        "text": "<p>Start today and change or cancel whenever you like.</p>",
+        "color_scheme": "scheme-01cf0232-bc91-4217-ba3a-354366637960",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": ["hero", "how_it_works", "benefits", "controls", "pricing", "faq", "cta"]
+}
