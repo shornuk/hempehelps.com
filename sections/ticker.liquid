@@ -12,66 +12,79 @@
     }
   }
   
-  /* Animation */
-@-webkit-keyframes scroll {
-  0% {
-    transform: translateX(0);
+  @keyframes ticker-scroll-{{ section.id }} {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-300px * {{ section.blocks.size }}));
+    }
   }
-  100% {
-    transform: translateX(calc(-300px * 7));
+
+  .ticker-container .ticker-tape {
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
   }
-}
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
+
+  .ticker-container .ticker-tape:before,
+  .ticker-container .ticker-tape:after {
+    background: linear-gradient(to right, rgb(var(--color-background)) 0%, rgba(var(--color-background), 0) 100%);
+    content: "";
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: clamp(32px, 15vw, 200px);
+    z-index: 2;
+    pointer-events: none;
   }
-  100% {
-    transform: translateX(calc(-300px * 7));
+
+  .ticker-container .ticker-tape:after {
+    right: 0;
+    transform: rotateZ(180deg);
   }
-}
-/*  Styling  */
-.ticker-container .ticker-tape {
-  height: auto;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
 
-.ticker-container .ticker-tape:before, .ticker-container .ticker-tape:after {
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-  content: "";
-  height: 140px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
+  .ticker-container .ticker-tape:before {
+    left: 0;
+  }
 
-.ticker-container .ticker-tape:after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
+  .section-{{ section.id }}-padding .slide-track {
+    animation: ticker-scroll-{{ section.id }} {{ section.blocks.size | times: 11 }}s linear infinite;
+    display: flex;
+    width: max-content;
+  }
 
-.ticker-container .ticker-tape:before {
-  left: 0;
-  top: 0;
-}
+  .ticker-container div.slide {
+    box-sizing: border-box;
+    flex: 0 0 300px;
+    width: 300px;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.ticker-container .slide-track {
-  -webkit-animation: scroll 80s linear infinite;
-          animation: scroll 80s linear infinite;
-  display: flex;
-  width: calc(300px * 14);
-}
+  .ticker-container div.slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
+  }
 
-.ticker-container div.slide {
-  padding: 0 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  @media (prefers-reduced-motion: reduce) {
+    .section-{{ section.id }}-padding .slide-track {
+      animation: none;
+    }
+  }
 {% endstyle %}
+
+{%- liquid
+  assign set_width = section.blocks.size | times: 300 | at_least: 300
+  assign copies = 3840 | divided_by: set_width | plus: 2
+-%}
 
 <div class="">
   <div class="section-{{ section.id }}-padding {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -97,22 +110,19 @@
     <div class="ticker-container">
       <div class="ticker-tape">
         <div class="slide-track">
-          {% for i in (1..10) %}
-             {%- for block in section.blocks -%}
-              <div class="slide">
-                {%- liquid
-                  assign height = 120
-                  assign sizes = '100vw'
-                  assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-              -%}
-              {{
-                block.settings.image
-                | image_url: width: 3840
-                | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
-              }}
+          {%- for i in (1..copies) -%}
+            {%- for block in section.blocks -%}
+              <div class="slide"{% if i > 1 %} aria-hidden="true"{% endif %}>
+                {%- if block.settings.image != blank -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 600
+                    | image_tag: loading: 'eager', sizes: '276px', widths: '276, 414, 552, 600'
+                  }}
+                {%- endif -%}
               </div>
-            {% endfor %}
-          {% endfor %}
+            {%- endfor -%}
+          {%- endfor -%}
         </div>
       </div>
     </div>
